@@ -37,12 +37,12 @@
 		</ul>
 		</p>
 			Bei Gewinn einer Runde bekommt der Spieler oder der Computer jeweils einen Punkt. Wer zuerst die eingestellte Anzahl an Runden gewinnt, ist der Sieger.
-		<p>	Optionale Idee: Es besteht die Möglichkeit, anstatt drei, vier mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Brunnen eine Option ist.
+		<p>	Optionale zusätzliche Idee: Es besteht die Möglichkeit, anstatt drei, vier mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Brunnen eine Option ist.
 			Dabei gelten folgende Regeln:
 		<ul> 
 			<li>Schere schlägt Papier</li>
 			<li>Stein schlägt Schere</li>
-			<li>Papier schlägt Stein </li>
+			<li>Papier schlägt Stein und Brunnen</li>
 			<li>Brunnen schlägt Schere und Stein</li>
 		</ul>
 		</p>
@@ -55,13 +55,13 @@
 		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
 		<ul>
 			<li>Was soll Ihre Anwendung leisten?</li>
-				Die Anwendung soll Zufallszahlen generieren diese in einer der drei Variablen umwandeln und schlussendlich das Ergebnis auswerten und den Gewinner ermitteln.
-			<br>Sie soll erkennen können wenn jemand 3 dreimal oder mehr gewonnen hat (muss nicht hintereinander sein). 
+				Die Anwendung soll Zufallszahlen generieren, diese in einer der drei Variablen umwandeln und schlussendlich das Ergebnis auswerten und den Gewinner ermitteln.
+			<br>Sie soll erkennen können, wenn jemand dreimal oder öfters gewonnen hat (muss nicht hintereinander sein). 
 			<li>Welche Dienste werden angeboten?</li>
 				Man soll auswählen können ob man Schere, Stein oder Papier nehmen will. In dem Fall wählt man die Ziffer 1,2 oder die 3. 
-			<br>Desweiteren sollte ausgewaehlt werden koennen wie viele Runden gewonnen werden sollen um die Runde zu gewinnen.   
+			<br>Desweiteren sollte ausgewaehlt werden koennen, wie viele Runden gewonnen werden sollen, um das gesamte Spiel zu gewinnen.   
 			<li>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</li>
-				Es muss Variablen für Symbol Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden festgelegt werden.
+				Es müssen Variablen für Symbol Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden festgelegt werden.
 			<li>Wie soll sich das System in bestimmten Situationen verhalten?</li>
 				Das System soll aufhören, wenn einer eine bestimmte Anzahl an gewonnenen Runden hat. 
 			<li>Welche Daten sind dauerhaft zu speichern?</li>
@@ -71,7 +71,7 @@
 		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
 		<ul>
 			<li>Wie soll die Bedieneroberfläche aussehen?</li>
-				Es soll eine übersichtliche Oberfläche sein, mit Punktestand, Anzahl gespielten Runden, Textfeld was anzeigt ob es einen Sieger etc. gibt.
+				Es soll eine übersichtliche Oberfläche sein, bei der Punktestand, Anzahl der gespielten Runden, sowie ein Textfeld des schlussendlichen Siegers angezeigt wird.
 			<li>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</li>
 			<li>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</li>
 			Java
@@ -141,7 +141,7 @@
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
 		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.
 		<br>Etwaige Aufwandsschätzung in Stunden: 80h. 
-			Aufteilung: Melih: Variablen Initialisieren und Deklarieren & Bedingungen aufstellen fürs gewinnnen bzw verlieren.
+		<br>Aufteilung: Melih: Variablen Initialisieren und Deklarieren & Bedingungen aufstellen fürs gewinnnen bzw verlieren.
 			Jonas: Ausgabe auf den Bildschirm und Spielanzahlcounter
 			Burak: Bedingungen aufstellen & Ausgabe auf den Bildschirm 
 		</p>

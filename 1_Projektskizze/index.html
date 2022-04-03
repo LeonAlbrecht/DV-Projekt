@@ -10,11 +10,11 @@
 		<img src="images/HFU-Logo.png">
 		<h1>Projekt: Schere Stein Papier</h1>
 		<h2>Semester: SS 2022</h2>
-		<b>Teamführer:</b>
+		<b>	Teamführer:</b>
 		<ul>
 			<li>Leon Albrecht (leon.albrecht@hs-furtwangen.de)</li>
 		</ul>
-		<b>Teammitglieder:</b>
+		<b>	Teammitglieder:</b>
 		<ul>
 			
 			<li>Melih Aslan (melih.aslan@hs-furtwangen.de)</li>
@@ -25,55 +25,60 @@
 	</header>
 	<main>
 		<h2>1. Projekt-Beschreibung</h2>
-		<p>	Das Projekt beschreibt ein Spiel namens Schere, Stein, Papier, bei dem ein Spieler gegen den Computer spielt.
-		<br>Dabei kann der Spieler zwischen den Optionen Schere, Stein, Papier auswählen durch die Eingabe der Nummer 1 (Schere), 2 (Stein) oder 3 (Papier) aus. 
-			Der Computer wählt ebenfalls eine zufällige Zahl von 1bis 3.
-		<p>
-		<b>Dabei gelten folgende Regeln:</b>
+		<p>	Das Projekt beschreibt ein Spiel namens Schere, Stein, Papier, bei dem ein Spieler gegen den Computer oder gegen einen zweiten Spieler spielt.
+		<br>Dabei kann der Spieler/ die Spieler zwischen den Optionen Schere, Stein, Papier auswählen durch das Auswählen der jeweiligen Buttons/ Bilder (Schere, Stein, Papier). 
+		<br>Der Computer wählt ebenfalls eine zufällige Option aus.
+		<br>
+		<b>	Dabei gelten folgende Regeln:</b>
 		<ul>
 			<li>Schere schlägt Papier</li>
 			<li>Stein schlägt Schere</li>
 			<li>Papier schlägt Stein</li>
 		</ul>
-		</p>
+	
 			Bei Gewinn einer Runde bekommt der Spieler oder der Computer jeweils einen Punkt. Wer zuerst die eingestellte Anzahl an Runden gewinnt, ist der Sieger.
-		<p>	Optionale zusätzliche Idee: Es besteht die Möglichkeit, anstatt drei, vier mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Brunnen eine Option ist.
-			Dabei gelten folgende Regeln:
+		<br>
+		<p>	Optionale zusätzliche Idee:<br>
+		 	Es besteht die Möglichkeit, anstatt drei, fünf mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Echse und Spock Optionen sind.
+		<br>
+		<b> Dabei gelten folgende Regeln:</b>
 		<ul> 
-			<li>Schere schlägt Papier</li>
-			<li>Stein schlägt Schere</li>
+			<li>Schere schlägt Papier und Echse</li>
+			<li>Stein schlägt Schere und Echse</li>
 			<li>Papier schlägt Stein und Brunnen</li>
-			<li>Brunnen schlägt Schere und Stein</li>
-		</ul>
+			<li>Echse schlägt Spock und Papier</li>
+			<li>Spock schlägt Schere und Stein</li>
+		</ul> 
 		</p>
-			Aufgrund dessen, dass Brunnen nun Schere und Stein schlägt und somit die Chance höher ist zu gewinnen, gilt folgende zusätzliche Regel:
-		<ul>
-			<li>verliert man mit der Option Brunnen, bekommt der Spieler/ Computer einen Minuspunkt</li>
-		</ul>
+			
 		</p>
 		<h2>2. Features und Anforderungen</h2>
 		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
 		<ul>
-			<li>Was soll Ihre Anwendung leisten?</li>
+			<li><b>Was soll Ihre Anwendung leisten?</b></li>
 				Die Anwendung soll Zufallszahlen generieren, diese in einer der drei Variablen umwandeln und schlussendlich das Ergebnis auswerten und den Gewinner ermitteln.
 			<br>Sie soll erkennen können, wenn jemand dreimal oder öfters gewonnen hat (muss nicht hintereinander sein). 
-			<li>Welche Dienste werden angeboten?</li>
+			<br><br>
+			<li><b>Welche Dienste werden angeboten?</b></li>
 				Man soll auswählen können ob man Schere, Stein oder Papier nehmen will. In dem Fall wählt man die Ziffer 1,2 oder die 3. 
-			<br>Desweiteren sollte ausgewaehlt werden koennen, wie viele Runden gewonnen werden sollen, um das gesamte Spiel zu gewinnen.   
-			<li>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</li>
+			<br>Desweiteren sollte ausgewaehlt werden koennen, wie viele Runden gewonnen werden sollen, um das gesamte Spiel zu gewinnen.
+			<br><br>  
+			<li><b>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</b></li>
 				Es müssen Variablen für Symbol Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden festgelegt werden.
-			<li>Wie soll sich das System in bestimmten Situationen verhalten?</li>
-				Das System soll aufhören, wenn einer eine bestimmte Anzahl an gewonnenen Runden hat. 
-			<li>Welche Daten sind dauerhaft zu speichern?</li>
+			<br><br>
+			<li><b>Wie soll sich das System in bestimmten Situationen verhalten?</b></li>
+				Das System soll aufhören, wenn einer eine bestimmte Anzahl an gewonnenen Runden hat.
+			<br><br> 
+			<li><b>Welche Daten sind dauerhaft zu speichern?</b></li>
 			    die Anzahl der gespielten Runden, die Anzahl der gewonnenen Runden
 				
 		</ul>
 		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
 		<ul>
-			<li>Wie soll die Bedieneroberfläche aussehen?</li>
+			<li><b>Wie soll die Bedieneroberfläche aussehen?</b></li>
 				Es soll eine übersichtliche Oberfläche sein, bei der Punktestand, Anzahl der gespielten Runden, sowie ein Textfeld des schlussendlichen Siegers angezeigt wird.
-			<li>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</li>
-			<li>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</li>
+			<li><b>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</b></li>
+			<li><b>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</b></li>
 			Java
 		</ul>
 		<h2>3. Architektur</h2>

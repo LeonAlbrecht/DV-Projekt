@@ -87,61 +87,47 @@
 
 		<div class="diagram">
 			classDiagram
-			class Game {
-				startGame()
-				endGame()
-
-			}
-			class Hands {
-				compareHands()
-				announceWinner()
-			}
-			class PlayerHand {
-				selectPick()
-			}
-			class ComputerHand {
-				randomizePick()
-			}
-			class Schere {
-				int 1
+			
+			class GUI {
 				
-			}
-			class Stein {
-				int 2
-				
-			}
-			class Papier {
-				int 3
-				
-			}
-			class Score {
-				int highScore
-				int playedRounds
-				int wonRounds
-				addScore()
-				compareScores()
 
 
 			}
-			class PlayerScore {
-				int playerScore
-			}
-			class ComputerScore {
-				int computerScore
+			class Container {
+
+				setFrame()
+				setPanel()
 
 			}
-			Game <|-- Hands
-			Game <|-- Score
-			Hands <|-- PlayerHand
-			Hands <|-- ComputerHand
-			Score <|-- PlayerScore
-			Score <|-- ComputerScore
-			PlayerHand <|-- Schere
-			PlayerHand <|-- Stein
-			PlayerHand <|-- Papier
-			ComputerHand <|-- Schere
-			ComputerHand <|-- Stein
-			ComputerHand <|-- Papier
+			class JComponent {
+
+			}
+			class Frame {
+
+				setSize()
+				setLocation()
+				setTitle()
+				setVisible()
+				setCloseOperation()
+
+			}
+			class Panel {
+
+				setBorder()
+				setLayout()
+				addJComponent() 
+			}
+			
+			GUI <|-- Container
+			GUI <|-- JComponent
+			Container <|-- Frame
+			Container <|-- Panel
+			JComponent <|-- JLabel
+			JComponent <|-- JButton
+			JComponent <|-- JTextfield
+			JComponent <|-- JCheckBox
+			
+			
 		</div>
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
 		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.

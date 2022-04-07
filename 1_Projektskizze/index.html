@@ -81,6 +81,236 @@
 			<li><b>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</b></li>
 			Java
 		</ul>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+
+			 
+										 							
+		<h3>Ablauf der Bedieneroberfläche:</h3>
+
+		<p>
+
+			<b>Titelbildschirm:</b>
+		<table>
+			<tr>
+			  <td>
+				 -	Titel:
+			  </td>
+			  <td>
+				Textfeld [0]: „Willkommen zu Schere, Stein, Papier“ 
+			  </td>
+			</tr>
+			
+			<tr>
+			  <td>
+				 -Anzahl an Runden um zu gewinnen:
+			  </td>
+			  <td>
+				Textfeld [rounds]: „Runden:“ + Eingabefeld [rounds] 
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   -Modus auswählen:
+				</td>
+				<td>
+				  Button [M1]: „Normaler Modus“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+				  Button [M2]: „Mit Spock und Echse“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   -Spielerauswahl:
+				</td>
+				<td>
+					Button [1]: „Spiel gegen Computer“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Button [2]: „2 Spieler“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Namen der Spieler:
+				</td>
+				<td>
+					Textfeld [P1]: „Name Spieler 1:“ und Eingabefeld [P1]
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [P2]: „Name Spieler 2:“ und Eingabefeld [P2] 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Start:
+				</td>
+				<td>
+					Button [S]: „Start“ 
+				</td>
+			  </tr>
+			  
+		  </table>
+		  </p>
+		  <br>
+
+
+		  <p>
+			<b>Spiel 1.1 (Spieler gegen Computer, normaler Modus):</b>
+			<p>-	Spielbildschirm öffnet sich bei Auswählen von [M1], [1] und [S]
+		  <table >
+			<tr>
+			  <td>
+				-	Symbole der jeweiligen Objekte: 
+			  </td>
+			  <td>
+					Objekt [1]: Schere
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [2]: Stein 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [3]: Papier 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Punktestand Spieler und Computer: 
+				</td>
+				<td>
+					Textfeld [score1]: „Punkte Spielername: …“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [score2]: „Punkte Computer: …“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [1]: 
+				</td>
+				<td>
+					Textfeld [1]: „Sie haben Schere gewählt“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [2]: 
+				</td>
+				<td>
+					Textfeld [2]: „Sie haben Stein gewählt“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [3]: 
+				</td>
+				<td>
+					Textfeld [3]: „Sie haben Papier gewählt“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	3 Sekunden nach Objektauswahl:
+				</td>
+				<td>
+					Textfeld [6]: „Computer hat … gewählt“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [result]: „Unentschieden/ Sie/ Computer hat gewonnen 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach drei Sekunden: 
+				</td>
+				<td>
+					Symbole der Objekte werden wieder angezeigt 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Erneutes wiederholen, bis Computer
+				</td>
+				<td>
+					/Spieler Anzahl eingestellter Runden erreicht 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Erreichen der max. Punkte: 
+				</td>
+				<td>
+					Textfeld [winner]: „Sie sind/ Computer ist der Sieger“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach zehn Sekunden: 
+				</td>
+				<td>
+					Titelbildschirm wird wieder aufgerufen. 
+				</td>
+			  </tr>
+		  </table>
+
+
+
+
+
+
+		  
+		</p>
+		<br>
+		<br>	
+		</ul>
 		<h2>3. Architektur</h2>
 		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
 		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
@@ -93,10 +323,15 @@
 
 
 			}
-			class Container {
+			class Graphics {
 
-				setFrame()
-				setPanel()
+				draw()
+				fill()
+				drawImage()
+				moveObject()
+				rotateObject()
+				repaint()
+				setAnimationTiming()
 
 			}
 			class JComponent {
@@ -108,33 +343,158 @@
 				setLocation()
 				setTitle()
 				setVisible()
-				setCloseOperation()
+				setDefaultCloseOperation()
+				addPanels()
+				setFrameLayout()
 
 			}
 			class Panel {
 
-				setBorder()
-				setLayout()
+				setBounds()
+				setPanelLayout()
+				setBackroundColor()
 				addJComponent() 
 			}
+			class KeyBinds {
+
+				addActionListener()
+				escPressed()
+				sPressed()
+				pPressed()
+				rPressed()
+
+
+			}
+			class Participants {
+
+				int score
+				int choice
+				int roundsPlayed
+
+			}
+			class Player {
+
+				String name
+				setName()
+				selectChoice()
+			}
+			class Computer {
+
+				randomizeChoice()
+
+			}
+			class GameRules{
+
+				String Rules
+				int timer
+
+				readRules()
+				implementBeating()
+				compareChoices()
+				addScore()
+				countRoundsPlayed()
+				setRoundTimer()
+
+			}
+			class customGameRules {
+				
+				activateCGR()
+				deactivateCGR()
+				changeTimer()
+				changeWonRoundsNeeded()
+				overwriteRuleString()
+
+			}
+			class Data {
+
+				String name
+				intScore
+
+				saveHighscore()
+
+			}
 			
-			GUI <|-- Container
+			
 			GUI <|-- JComponent
-			Container <|-- Frame
-			Container <|-- Panel
+			GUI <|-- Graphics
+			Graphics <|-- Frame
+			Graphics <|-- Panel
+			GUI <|-- KeyBinds
 			JComponent <|-- JLabel
 			JComponent <|-- JButton
 			JComponent <|-- JTextfield
 			JComponent <|-- JCheckBox
+
+			Participants <|-- Player
+			Participants <|-- Computer
+
+			GameRules <|-- customGameRules
 			
 			
 		</div>
+
+		<p>Disclaimer: Einige Funktionen, wie z.b </p>
+
+		<p>Software Architektur (zur Visualisierung, keine Klassen):</p>
+		
+		<div class="diagram">
+
+			classDiagram
+
+			class Titlescreen {
+
+				startGame
+				endGame
+				chooseOptions
+			}
+			class ParticipantSelector {
+
+				chooseToPlayAgainstPlayer
+				chooseToPlayAgainstComputer
+
+			}
+			class GamemodeSelectorPvP {
+
+				chooseNormalRPS
+				chooseRPSLS
+
+			}
+			class GamemodeSelectorPvC {
+
+				chooseNormalRPS
+				chooseRPSLS
+
+			}
+			class Options {
+
+				changeKeyBinds
+				changeVolume
+				resizeWindow
+
+			}
+
+			Titlescreen <|-- Options
+			Titlescreen <|-- ParticipantSelector
+			ParticipantSelector <|-- GamemodeSelectorPvP
+			ParticipantSelector <|-- GamemodeSelectorPvC
+			GamemodeSelectorPvP <|-- RockPaperScissorsNormalPvP
+			GamemodeSelectorPvP <|-- RockPaperScissorsLizardShpockPvP
+			GamemodeSelectorPvC <|-- RockPaperScissorsNormalPvC
+			GamemodeSelectorPvC <|-- RockPaperScissorsLizardShpockPvC
+			
+		</div>
+
+
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
 		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.
 		<br>Etwaige Aufwandsschätzung in Stunden: 80h. 
-		<br>Aufteilung: Melih: Variablen Initialisieren und Deklarieren & Bedingungen aufstellen fürs gewinnnen bzw verlieren.
-			Jonas: Ausgabe auf den Bildschirm und Spielanzahlcounter
-			Burak: Bedingungen aufstellen & Ausgabe auf den Bildschirm 
+		<br>Aufteilung: 
+		<br>Leon:
+		<br>Melih:
+		<br>Jonas: 
+		<br>Burak: 
+		<br>Adham: Erstellung der Bedieneroberfläche(GUI)
+		<br>
 		</p>
 		<h2>Optional: Verweis auf andere HTML Dateien</h2>
 		<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>

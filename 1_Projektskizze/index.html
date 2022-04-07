@@ -53,15 +53,15 @@
 			
 		</p>
 		<h2>2. Features und Anforderungen</h2>
-		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
+		<p>Funktionalen Anforderungen (maximal 10):</p>
 		<ul>
 			<li><b>Was soll Ihre Anwendung leisten?</b></li>
 				Die Anwendung soll Zufallszahlen generieren, diese in einer der drei Variablen umwandeln und schlussendlich das Ergebnis auswerten und den Gewinner ermitteln.
-			<br>Sie soll erkennen können, wenn jemand dreimal oder öfters gewonnen hat (muss nicht hintereinander sein). 
+			<br>Sie soll erkennen können, wer wie oft gewonnen hat (muss nicht hintereinander sein). 
 			<br><br>
 			<li><b>Welche Dienste werden angeboten?</b></li>
 				Man soll auswählen können ob man Schere, Stein oder Papier nehmen will. In dem Fall wählt man die Ziffer 1,2 oder die 3. 
-			<br>Desweiteren sollte ausgewaehlt werden koennen, wie viele Runden gewonnen werden sollen, um das gesamte Spiel zu gewinnen.
+			<br>Desweiteren sollte ausgewählt werden können, wie viele Runden gewonnen werden sollen, um das gesamte Spiel zu gewinnen.
 			<br><br>  
 			<li><b>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</b></li>
 				Es müssen Variablen für Symbol Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden festgelegt werden.
@@ -73,15 +73,18 @@
 			    die Anzahl der gespielten Runden, die Anzahl der gewonnenen Runden
 				
 		</ul>
-		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
+		<p>Nicht-funktionale Anforderungen:</p>
 		<ul>
-			<li><b>Wie soll die Bedieneroberfläche aussehen?</b></li>
-				Es soll eine übersichtliche Oberfläche sein, bei der Punktestand, Anzahl der gespielten Runden, sowie ein Textfeld des schlussendlichen Siegers angezeigt wird.
+			
 			<li><b>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</b></li>
 			<li><b>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</b></li>
-			Java
+				HTML
+			<br>Java
+			<br>Java skript
+			<li><b>Wie soll die Bedieneroberfläche aussehen?</b></li>
+				Ein übersichtlicher Titelbildschirm, bei dem Einstellungen für das Spiel getätigt werden können, wie zum Beispiel Anzahl an Runden, Moduswahl, sowie Spielername Einagabe.
+			<br>Bei dem Spielbildschirm soll der jeweilige Punktestand, Auswahl an Objekte, sowie Textfelder der jeweiligen Aktionen (Objektauswahl, Sieger) angezeigt werden.
 		</ul>
-		<br>
 		<br>
 		<br>
 		<br>
@@ -89,7 +92,7 @@
 
 			 
 										 							
-		<h3>Ablauf der Bedieneroberfläche:</h3>
+		<h3>Aufbau und Ablauf der Bedieneroberfläche:</h3>
 
 		<p>
 
@@ -298,9 +301,130 @@
 				<td>
 					Titelbildschirm wird wieder aufgerufen. 
 				</td>
-			  </tr>
+			</tr>
 		  </table>
 
+		  <p> (Bei der Auswahl von Modus zwei gibt es zusätlich Objekt [4] als Echse und Objekt [5] als Spock)</p>
+		  <br>
+
+
+		  <P>
+			  <b>Spiel 2.1 (Spieler 1 gegen Spieler 2, normaler Modus):</b>
+			  <P>-	Spielbildschirm öffnet sich bei Auswählen von [M1], [2], [P1], [P2] und [S]
+		  <table>
+			<tr>
+			  <td>
+				-	Symbole der jeweiligen Objekte:
+			  </td>
+			  <td>
+				Objekt [1]: Schere
+			  </td>
+			</tr>
+			
+			<tr>
+			  <td>
+				
+			  </td>
+			  <td>
+				Objekt [2]: Stein 
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [3]: Papier 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Punktestand Spieler 1 und Spieler 2:
+				</td>
+				<td>
+					Textfeld [score3]: „Punkte Spielername 1: …“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [score4]: „Punkte Spielername 2: …“
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Information, wer dran ist:
+				</td>
+				<td>
+					Textfeld [7]: „Spieler 1 ist an der Reihe, Spieler 2 wegschauen“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach Auswahl des 1. Spielers:
+				</td>
+				<td>
+					Textfeld [8]: „Spieler 2 ist an der Reihe“
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach Auswahl des 2. Spielers:
+				</td>
+				<td>
+					Textfeld [9]: „Spieler 1 hat … gewählt, Spieler 2 hat … gewählt
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Ergebnis: 
+				</td>
+				<td>
+					Textfeld [result]: „Unentschieden/Spieler 1/Spieler 2 hat gewonnen 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach drei Sekunden: 
+				</td>
+				<td>
+					Symbole der Objekte werden wieder angezeigt
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Erneutes wiederholen, bis Spieler 1/ 
+				</td>
+				<td>
+					Spieler 2 Anzahl eingestellte Runden erreicht
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Erreichen der max. Punkte: 
+				</td>
+				<td>
+					Textfeld [winner]: „Spieler 1/Spieler 2 ist der Sieger“  
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach zehn Sekunden: 
+				</td>
+				<td>
+					Titelbildschirm wird wieder aufgerufen.
+				</td>
+			  </tr>
+		  </table>
+		</p>
+		<p> (Bei der Auswahl von Modus zwei gibt es zusätlich Objekt [4] als Echse und Objekt [5] als Spock)</p>
 
 
 
@@ -312,8 +436,7 @@
 		<br>	
 		</ul>
 		<h2>3. Architektur</h2>
-		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
-		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
+		<p>Bsp.: Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
 
 		<div class="diagram">
 			classDiagram
@@ -488,8 +611,7 @@
 
 
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
-		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.
-		<br>Etwaige Aufwandsschätzung in Stunden: 80h. 
+		<p>Etwaige Aufwandsschätzung in Stunden: 80h. 
 		<br>Aufteilung: 
 		<br>Leon:  Main Game	
 		<br>Melih: Erstellung der Bedieneroberfläche(GUI)

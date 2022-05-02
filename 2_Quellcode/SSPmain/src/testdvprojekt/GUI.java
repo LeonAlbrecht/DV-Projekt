@@ -202,24 +202,6 @@ public class GUI implements ActionListener{
 	
 		
 		 
-		//rEingabefeld.hide();
-		//mTextfeld.hide();
-		//m1.hide();
-		//m2.hide();
-		//playerTextfeld.hide();
-		//single.hide();
-		//duo.hide();
-		//P1Textfeld.hide();
-		//P2Textfeld.hide();
-		//P1Eingabefeld.hide();
-		//P2Eingabefeld.hide();
-		
-		
-		//panel.add(test);
-		//test.setBounds(100, 200, 200, 30);
-		
-		//}
-		//});
 
 	public static void main(String[] args) {
 		new GUI(); {

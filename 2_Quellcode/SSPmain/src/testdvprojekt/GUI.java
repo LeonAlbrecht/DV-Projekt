@@ -193,6 +193,18 @@ public class GUI implements ActionListener{
 			frame.dispose();
 			Normalsingle npvc= new Normalsingle();
 		}
+		if(m2.getBackground().equals(Color.green) && single.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			frame.dispose();
+			Specialsingle npvc= new Specialsingle();
+		}
+		if(m1.getBackground().equals(Color.green) && duo.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			frame.dispose();
+			Normalduo npvc= new Normalduo();
+		}
+		if(m2.getBackground().equals(Color.green) && duo.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			frame.dispose();
+			Specialduo npvc= new Specialduo();
+		}
 		
 		
 	

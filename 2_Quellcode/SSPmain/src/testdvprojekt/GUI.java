@@ -76,7 +76,7 @@ public class GUI implements ActionListener{
 		//Rahmen
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schließen wird Programm geschlossen
-		frame.add(panel, BorderLayout.CENTER);					
+		frame.add(panel);					
 		frame.setSize(1500, 700);								//größe des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);									//Rahmen wird angezeig

@@ -14,7 +14,7 @@ public class Normalduo {
 	JFrame frame = new JFrame();
 	JPanel panel1= new JPanel();
 	
-	Icon icon1;
+	Icon icon1= new ImageIcon("bild1.png");
 	Icon icon2;
 	JLabel Bild1= new JLabel(icon1);
 	Normalduo() {

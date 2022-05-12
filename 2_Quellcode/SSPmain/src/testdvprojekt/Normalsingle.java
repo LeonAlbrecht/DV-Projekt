@@ -198,7 +198,7 @@ public class Normalsingle implements ActionListener{
 	
 	public void announceWinner() {
 		
-		if(GUI.winscore == roundcount || testmain2.pscore*2 > GUI.winscore || testmain2.cscore > GUI.winscore) {
+		if(GUI.winscore == roundcount || testmain2.pscore*2 > GUI.winscore || testmain2.cscore*2 > GUI.winscore) {
 			
 			if(testmain2.pscore > testmain2.cscore) {
 				

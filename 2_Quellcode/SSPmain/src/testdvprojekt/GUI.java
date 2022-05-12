@@ -18,6 +18,8 @@ import javax.swing.JTextField;
 
 public class GUI implements ActionListener{
 	
+	public static int winscore;
+	
 	JFrame frame;
 	JLabel title;												//Titel des Rahmens
 	JPanel panel;				
@@ -205,7 +207,24 @@ public class GUI implements ActionListener{
 			frame.dispose();
 			Specialduo npvc= new Specialduo();
 		}
+
+		if(e.getSource() == r3) {
+			
+			winscore = 3;
+			
+		}
 		
+		if(e.getSource() == r5) {
+			
+			winscore = 5;
+			
+		}
+		
+		if(e.getSource() == r7) {
+			
+			winscore = 7;
+			
+		}
 		
 	
 		

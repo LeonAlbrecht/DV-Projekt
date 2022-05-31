@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Normalsingle implements ActionListener{
+public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus gegen Computer
 	
 	public static int a;
 	public static int roundcount;
@@ -22,7 +22,7 @@ public class Normalsingle implements ActionListener{
 	JButton button3 = new JButton("Papier");
 	JLabel pscore = new JLabel("Player Score: 0");
 	JLabel cscore = new JLabel("Computer Score: 0");
-	JLabel printline = new JLabel("Textausgabe:");
+	JLabel printline = new JLabel("W‰hlen Sie Schere, Stein oder Papier aus");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	
@@ -32,44 +32,49 @@ public class Normalsingle implements ActionListener{
 	
 	Normalsingle() {
 		
-
+		frame.setLayout(null);
+		frame.setLocation(0, 0);
+		frame.add(printline);
+		printline.setBounds(400, 100, 800, 20);
+		printline.setFont(new Font(null,Font.PLAIN,12));
 		
 		frame.add(button1);
-		button1.setBounds(100,500,100,50);
+		button1.setBounds(100,200,100,50);
 		button1.addActionListener(this);
 		frame.add(button2);
-		button2.setBounds(400,500,100,50);
+		button2.setBounds(400,200,100,50);
 		button2.addActionListener(this);
 		frame.add(button3);
-		button3.setBounds(700,500,100,50);
+		button3.setBounds(700,200,100,50);
 		button3.addActionListener(this);
 		
+		frame.add(ppick);
+		ppick.setBounds(100, 300, 300, 100);
+		ppick.setFont(new Font(null,Font.PLAIN,12));
+		frame.add(cpick);
+		cpick.setBounds(700, 300, 300, 100);
+		cpick.setFont(new Font(null,Font.PLAIN,12));
+		
+		frame.add(pscore);
+		pscore.setBounds(100, 400, 200, 50);
+		pscore.setFont(new Font(null,Font.PLAIN,12));
+		frame.add(cscore);
+		cscore.setBounds(700, 400, 200, 50);
+		cscore.setFont(new Font(null,Font.PLAIN,12));
+		
 		frame.add(playagain);
-		playagain.setBounds(400, 500, 100, 50);
+		playagain.setBounds(250, 500, 100, 50);
 		playagain.addActionListener(this);
 		playagain.hide();
 		frame.add(back);
-		back.setBounds(1100, 500, 100, 50);
+		back.setBounds(550, 500, 150, 50);
 		back.addActionListener(this);
 		back.hide();
 		
-		frame.add(pscore);
-		pscore.setBounds(100, 100, 200, 100);
-		pscore.setFont(new Font(null,Font.PLAIN,12));
-		frame.add(cscore);
-		cscore.setBounds(1200, 100, 200, 100);
-		cscore.setFont(new Font(null,Font.PLAIN,12));
 		
-		frame.add(printline);
-		printline.setBounds(400, 100, 800, 300);
-		printline.setFont(new Font(null,Font.PLAIN,12));
 		
-		frame.add(ppick);
-		ppick.setBounds(100, 400, 200, 100);
-		ppick.setFont(new Font(null,Font.PLAIN,12));
-		frame.add(cpick);
-		cpick.setBounds(1200, 400, 200, 100);
-		cpick.setFont(new Font(null,Font.PLAIN,12));
+		
+		
 		
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieﬂen wird Programm geschlossen
@@ -88,7 +93,7 @@ public class Normalsingle implements ActionListener{
 		if(e.getSource()==button1) {
 			
 			 a = 1;
-			 ppick.setText("Schere");
+			 ppick.setText("Sie haben Schere ausgew‰hlt");
 			 testmain2.compare();
 			 showPicks();
 			 pscore.setText("Player Score: " + testmain2.pscore);
@@ -101,7 +106,7 @@ public class Normalsingle implements ActionListener{
 		if(e.getSource()==button2) {
 			
 			a = 2;
-			ppick.setText("Stein");
+			ppick.setText("Sie haben Stein ausgew‰hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -115,7 +120,7 @@ public class Normalsingle implements ActionListener{
 		if(e.getSource()==button3) {
 			
 			a = 3;
-			ppick.setText("Papier");
+			ppick.setText("Sie haben Papier ausgew‰hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -251,17 +256,17 @@ public class Normalsingle implements ActionListener{
 		
 		if(testmain2.cpick == 1) {
 			
-			cpick.setText("Schere");
+			cpick.setText("Der Computer hat Schere ausgew‰hlt");
 		}
 		
 if(testmain2.cpick == 2) {
 			
-			cpick.setText("Stein");
+			cpick.setText("Der Computer hat Stein ausgew‰hlt");
 		}
 
 if(testmain2.cpick == 3) {
 	
-	cpick.setText("Papier");
+	cpick.setText("Der Computer hat Papier ausgew‰hlt");
 }
 		
 	}

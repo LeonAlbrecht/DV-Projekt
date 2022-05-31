@@ -10,100 +10,627 @@
 		<img src="images/HFU-Logo.png">
 		<h1>Projekt: Schere Stein Papier</h1>
 		<h2>Semester: SS 2022</h2>
-		<b>Teammitglieder:</b>
+		<b>	Teamführer:</b>
+		<ul>
+			<li>Leon Albrecht (leon.albrecht@hs-furtwangen.de)</li>
+		</ul>
+		<b>	Teammitglieder:</b>
 		<ul>
 			
 			<li>Melih Aslan (melih.aslan@hs-furtwangen.de)</li>
 			<li>Jonas Zimmermann (jonas.zimmermann@hs-furtwangen.de)</li>
 			<li>Burak Dogruoez (burak.dogruoez@hs-furtwangen.de)</li>
 			<li>Adham Sino (adham.sino@hs-furtwangen.de)</li>
-			<li>Leon Albrecht (leon.albrecht@hs-furtwangen.de)</li>
 		</ul>
 	</header>
 	<main>
 		<h2>1. Projekt-Beschreibung</h2>
-		<p>	Das Projekt beschreibt ein Spiel namens Schere, Stein, Papier, bei dem ein Spieler gegen den Computer spielt.
-			Dabei kann der Spieler zwischen den Optionen Schere, Stein, Papier auswählen durch die Eingabe der Nummer 1 (Schere), 2 (Stein) oder 3 (Papier) aus. 
-			Der Computer wählt ebenfalls eine zufällige Zahl von 1 bis 3.
-		<p>
-		<b>Dabei gelten folgende Regeln:</b>
+		<p>	Das Projekt beschreibt ein Spiel namens Schere, Stein, Papier, bei dem ein Spieler gegen den Computer oder gegen einen zweiten Spieler spielt.
+		<br>Dabei kann der Spieler/ die Spieler zwischen den Optionen Schere, Stein, Papier auswählen durch das Auswählen der jeweiligen Buttons/ Bilder (Schere, Stein, Papier). 
+		<br>Der Computer wählt ebenfalls eine zufällige Option aus.
+		<br>
+		<b>	Dabei gelten folgende Regeln:</b>
 		<ul>
 			<li>Schere schlägt Papier</li>
 			<li>Stein schlägt Schere</li>
 			<li>Papier schlägt Stein</li>
 		</ul>
-		</p>
+	
 			Bei Gewinn einer Runde bekommt der Spieler oder der Computer jeweils einen Punkt. Wer zuerst die eingestellte Anzahl an Runden gewinnt, ist der Sieger.
-		<p>	Optional: Es besteht die Möglichkeit, anstatt drei, vier mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Brunnen eine Option ist.
-			Dabei gelten folgende Regeln:
+		<br>
+		<p>	Optionale zusätzliche Idee:<br>
+		 	Es besteht die Möglichkeit, anstatt drei, fünf mögliche Merkmale auszuwählen, sodass neben Schere, Stein und Papier auch Echse und Spock Optionen sind.
+		<br>
+		<b> Dabei gelten folgende Regeln:</b>
 		<ul> 
-			<li>Schere schlägt Papier</li>
-			<li>Stein schlägt Schere</li>
+			<li>Schere schlägt Papier und Echse</li>
+			<li>Stein schlägt Schere und Echse</li>
 			<li>Papier schlägt Stein und Brunnen</li>
-			<li>Brunnen schlägt Schere und Stein</li>
-		</ul>
+			<li>Echse schlägt Spock und Papier</li>
+			<li>Spock schlägt Schere und Stein</li>
+		</ul> 
 		</p>
-			Aufgrund dessen, dass Brunnen nun Schere und Stein schlägt und somit die Chance höher ist zu gewinnen, gilt folgende zusätzliche Regel:
-		<ul>
-			<li>Wird Brunnen gewählt und man verliert, bekommt man einen Minuspunkt.</li>
-		</ul>
+
+		<p>
+			<img src="https://static.wikia.nocookie.net/bigbangtheory/images/a/aa/Stein_Schere_Papier_Echse_Spock.jpg/revision/latest/scale-to-width-down/500?cb=20110727063646&path-prefix=de" height="200px">
+		</p>
+			
 		</p>
 		<h2>2. Features und Anforderungen</h2>
-		<p>TODO: Stellen Sie die aus Ihrer Sicht wichtigsten funktionalen Anforderungen (maximal 10) zusammen:</p>
+		<p>Funktionalen Anforderungen (maximal 10):</p>
 		<ul>
-			<li>Was soll Ihre Anwendung leisten?</li>
-				Die Anwendung soll Zufallszahlen generieren und vergleichen können.
-				Sie soll erkennen können wenn jemand 3 dreimal oder mehr gewonnen hat (muss nicht hintereinander sein). 
-			<li>Welche Dienste werden angeboten?</li>
-				Man soll auswählen können ob man Schere, Stein oder Papier nehmen will. In dem Fall wählt man die Ziffer 1,2 oder die 3.  
-			<li>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</li>
-				Es muss Variablen für Symbol Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden festgelegt werden.
-			<li>Wie soll sich das System in bestimmten Situationen verhalten?</li>
-				Das System soll aufhören, wenn einer eine bestimmte Anzahl an gewonennen Runden hat. 
-			<li>Welche Daten sind dauerhaft zu speichern?</li>
-			    Rundenergebnisse, gegebenfalls Ergebnisse gegeneinander. 
+			<li><b>Was soll Ihre Anwendung leisten?</b></li>
+				Unsere Anwendung soll eine spaßvolles und übersichtliches Spiel sein, bei dem man entweder gegen den Computer spielt oder man gegen einen weiteren spieler auf dem selben Gerät spielen kann. 
+			<br>Dabei sind für den Spieler nur Symbole zu erkennen die als Eingabewerte erkannt, verglichen werden und somit das Ergebnis ausgewertet werden kann.
+			<br>Außerdem soll man ziwschen mehreren Modis auswählen können und Effekte sollen das Spielerlebnis eventuell ein wenig aufbessern.
+			<br><br>
+			<li><b>Welche Dienste werden angeboten?</b></li>
+				Man soll auswählen können ob man Schere, Stein oder Papier(Echse und Spock bei dem erweiterten Modi) nehmen will. In dem Fall klickt man auf die Symbole.
+			<br>Desweiteren sollte ausgewählt werden können, wie viele Runden gespielt werden sollen, welchen Modi man spielen will und gegen wen man antretet.(Spieler1/2 Namen auswählbar und eventuell hat der Computer auch einen Namen)
+			<br><br>  
+			<li><b>Welche Eingangsdaten sind erforderlich? Zu welchen Ausgaben werden diese verarbeitet?</b></li>
+				Es müssen Variablen für die Symbole Spieler, Symbol Computer, Anzahl der Runden, Computer/Spieler gewinnt eine Runde und Anzahl der gewonennen Runden(etc.) festgelegt werden.
+			<br>Diese Eingangsdaten werden vom Spieler mit den Eingangsdaten des Computers verglichen, sodass das Ergebnis der Runde ermittelt werden kann.	
+			<br><br>
+			<li><b>Wie soll sich das System in bestimmten Situationen verhalten?</b></li>
+				Das System soll aufhören, wenn einer eine bestimmte Anzahl an gewonnenen Runden hat, die auswählbar sind.
+			<br><br> 
+			<li><b>Welche Daten sind dauerhaft zu speichern?</b></li>
+			    Die Anzahl der gespielten Runden, die Anzahl der gewonnenen Runden, die Symbole, die GUI.
+				
 		</ul>
-		<p>TODO: Darüber hinaus sollen nicht-funktionale Anforderungen spezifiziert werden:</p>
+		<p>Nicht-funktionale Anforderungen:</p>
 		<ul>
-			<li>Wie soll die Bedieneroberfläche aussehen?</li>
-				Es soll eine übersichtliche Oberfläche sein, mit Punktestand, Anzahl gespielten Runden, Textfeld was anzeigt ob es einen Sieger etc. gibt.
-			<li>In welcher Systemumgebung soll Ihr Programm lauffähig sein?</li>
-			    Auf Eclipse, Kleinrechnersysteme.
-			<li>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</li>
+			
+			
+			<br><br>
+			<li><b>Mit welchen Entwicklungswerkzeugen wird gearbeitet?</b></li>
+				HTML
+			<br>Java
+			<br>Java skript
+			<br><br>
+			<li><b>Wie soll die Bedieneroberfläche aussehen?</b></li>
+				Ein übersichtlicher Titelbildschirm, bei dem Einstellungen für das Spiel getätigt werden können, wie zum Beispiel Anzahl an Runden, Moduswahl, sowie Spielername Einagabe.
+			<br>Bei dem Spielbildschirm soll der jeweilige Punktestand, Auswahl an Objekte, sowie Textfelder der jeweiligen Aktionen (Objektauswahl, Sieger) angezeigt werden.
+		</ul>
+		<br>
+		<br>
+		<br>
+		
+
+			 
+										 							
+		<h3>Aufbau und Ablauf der Bedieneroberfläche:</h3>
+
+		<p>
+
+			<b>Titelbildschirm:</b>
+		<table>
+			<tr>
+			  <td>
+				 -	Titel:
+			  </td>
+			  <td>
+				Textfeld [0]: „Willkommen zu Schere, Stein, Papier“ 
+			  </td>
+			</tr>
+			
+			<tr>
+			  <td>
+				 -Anzahl an Runden um zu gewinnen:
+			  </td>
+			  <td>
+				Textfeld [rounds]: „Runden:“ + Eingabefeld [rounds] 
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   -Modus auswählen:
+				</td>
+				<td>
+				  Button [M1]: „Normaler Modus“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+				  Button [M2]: „Mit Spock und Echse“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   -Spielerauswahl:
+				</td>
+				<td>
+					Button [1]: „Spiel gegen Computer“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Button [2]: „2 Spieler“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Namen der Spieler:
+				</td>
+				<td>
+					Textfeld [P1]: „Name Spieler 1:“ und Eingabefeld [P1]
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [P2]: „Name Spieler 2:“ und Eingabefeld [P2] 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Start:
+				</td>
+				<td>
+					Button [S]: „Start“ 
+				</td>
+			  </tr>
+			  
+		  </table>
+		  </p>
+		  <br>
+
+
+		  <p>
+			<b>Spiel 1.1 (Spieler gegen Computer, normaler Modus):</b>
+			<p>-	Spielbildschirm öffnet sich bei Auswählen von [M1], [1] und [S]
+		  <table >
+			<tr>
+			  <td>
+				-	Symbole der jeweiligen Objekte: 
+			  </td>
+			  <td>
+					Objekt [1]: Schere
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [2]: Stein 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [3]: Papier 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Punktestand Spieler und Computer: 
+				</td>
+				<td>
+					Textfeld [score1]: „Punkte Spielername: …“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [score2]: „Punkte Computer: …“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [1]: 
+				</td>
+				<td>
+					Textfeld [1]: „Sie haben Schere gewählt“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [2]: 
+				</td>
+				<td>
+					Textfeld [2]: „Sie haben Stein gewählt“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Bei Auswahl Objekt [3]: 
+				</td>
+				<td>
+					Textfeld [3]: „Sie haben Papier gewählt“ 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	3 Sekunden nach Objektauswahl:
+				</td>
+				<td>
+					Textfeld [6]: „Computer hat … gewählt“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [result]: „Unentschieden/ Sie/ Computer hat gewonnen 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach drei Sekunden: 
+				</td>
+				<td>
+					Symbole der Objekte werden wieder angezeigt 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Erneutes wiederholen, bis Computer
+				</td>
+				<td>
+					/Spieler Anzahl eingestellter Runden erreicht 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Erreichen der max. Punkte: 
+				</td>
+				<td>
+					Textfeld [winner]: „Sie sind/ Computer ist der Sieger“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach zehn Sekunden: 
+				</td>
+				<td>
+					Titelbildschirm wird wieder aufgerufen. 
+				</td>
+			</tr>
+		  </table>
+
+		  <p> (Bei der Auswahl von Modus zwei gibt es zusätlich Objekt [4] als Echse und Objekt [5] als Spock)</p>
+		  <br>
+
+
+		  <P>
+			  <b>Spiel 2.1 (Spieler 1 gegen Spieler 2, normaler Modus):</b>
+			  <P>-	Spielbildschirm öffnet sich bei Auswählen von [M1], [2], [P1], [P2] und [S]
+		  <table>
+			<tr>
+			  <td>
+				-	Symbole der jeweiligen Objekte:
+			  </td>
+			  <td>
+				Objekt [1]: Schere
+			  </td>
+			</tr>
+			
+			<tr>
+			  <td>
+				
+			  </td>
+			  <td>
+				Objekt [2]: Stein 
+			  </td>
+			</tr>
+			<tr>
+				<td>
+				   
+				</td>
+				<td>
+					Objekt [3]: Papier 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Punktestand Spieler 1 und Spieler 2:
+				</td>
+				<td>
+					Textfeld [score3]: „Punkte Spielername 1: …“
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+				   
+				</td>
+				<td>
+					Textfeld [score4]: „Punkte Spielername 2: …“
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Information, wer dran ist:
+				</td>
+				<td>
+					Textfeld [7]: „Spieler 1 ist an der Reihe, Spieler 2 wegschauen“ 
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach Auswahl des 1. Spielers:
+				</td>
+				<td>
+					Textfeld [8]: „Spieler 2 ist an der Reihe“
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach Auswahl des 2. Spielers:
+				</td>
+				<td>
+					Textfeld [9]: „Spieler 1 hat … gewählt, Spieler 2 hat … gewählt
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Ergebnis: 
+				</td>
+				<td>
+					Textfeld [result]: „Unentschieden/Spieler 1/Spieler 2 hat gewonnen 
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Nach drei Sekunden: 
+				</td>
+				<td>
+					Symbole der Objekte werden wieder angezeigt
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-Erneutes wiederholen, bis Spieler 1/ 
+				</td>
+				<td>
+					Spieler 2 Anzahl eingestellte Runden erreicht
+				</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+					-	Bei Erreichen der max. Punkte: 
+				</td>
+				<td>
+					Textfeld [winner]: „Spieler 1/Spieler 2 ist der Sieger“  
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					-	Nach zehn Sekunden: 
+				</td>
+				<td>
+					Titelbildschirm wird wieder aufgerufen.
+				</td>
+			  </tr>
+		  </table>
+		</p>
+		<p> (Bei der Auswahl von Modus zwei gibt es zusätlich Objekt [4] als Echse und Objekt [5] als Spock)</p>
+
+
+
+
+
+		  
+		</p>
+		<br>
+		<br>	
 		</ul>
 		<h2>3. Architektur</h2>
-		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
-		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
+		<p>Bsp.: Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
 
 		<div class="diagram">
 			classDiagram
-			class Animal {
-				int age
-				String gender
-				isMammal()
-				mate()
+			
+			class GUI {
+				
+
+
 			}
-			class Duck {
-				String beakColor
-				swim()
-				quack()
+			class Graphics {
+
+				draw()
+				fill()
+				drawImage()
+				moveObject()
+				rotateObject()
+				repaint()
+				setAnimationTiming()
+
 			}
-			class Fish {
-				int sizeInFeet
-				canEat()
+			class JComponent {
+
+				Aufzählung von bereits implementierten Java Klassen
+
 			}
-			class Zebra {
-				bool is_wild
-				run()
+			class Frame {
+
+				setSize()
+				setLocation()
+				setTitle()
+				setVisible()
+				setDefaultCloseOperation()
+				addPanels()
+				setFrameLayout()
+
 			}
-			Animal <|-- Duck
-			Animal <|-- Fish
-			Animal <|-- Zebra
+			class Panel {
+
+				setBounds()
+				setPanelLayout()
+				setBackroundColor()
+				addJComponent() 
+			}
+			class KeyBinds {
+
+				addActionListener()
+				escPressed()
+				sPressed()
+				pPressed()
+				rPressed()
+
+
+			}
+			class Participants {
+
+				int score
+				int choice
+				int roundsPlayed
+
+			}
+			class Player {
+
+				String name
+				setName()
+				selectChoice()
+			}
+			class Computer {
+
+				randomizeChoice()
+
+			}
+			class GameRules{
+
+				String Rules
+				int timer
+
+				readRules()
+				implementBeating()
+				compareChoices()
+				addScore()
+				countRoundsPlayed()
+				setRoundTimer()
+
+			}
+			class customGameRules {
+				
+				activateCGR()
+				deactivateCGR()
+				changeTimer()
+				changeWonRoundsNeeded()
+				overwriteRuleString()
+
+			}
+			class Data {
+
+				String name
+				intScore
+
+				saveHighscore()
+
+			}
+			
+			
+			GUI <|-- JComponent
+			GUI <|-- Graphics
+			Graphics <|-- Frame
+			Graphics <|-- Panel
+			GUI <|-- KeyBinds
+			JComponent <|-- JLabel
+			JComponent <|-- JButton
+			JComponent <|-- JTextfield
+			JComponent <|-- JCheckBox
+
+			Participants <|-- Player
+			Participants <|-- Computer
+
+			GameRules <|-- customGameRules
+			
+			
 		</div>
+
+		<p>Disclaimer: Einige Funktionen, wie z.b </p>
+
+		<p>Software Architektur (zur Visualisierung, keine Klassen):</p>
+		
+		<div class="diagram">
+
+			classDiagram
+
+			class Titlescreen {
+
+				startGame
+				endGame
+				chooseOptions
+			}
+			class ParticipantSelector {
+
+				chooseToPlayAgainstPlayer
+				chooseToPlayAgainstComputer
+
+			}
+			class GamemodeSelectorPvP {
+
+				chooseNormalRPS
+				chooseRPSLS
+
+			}
+			class GamemodeSelectorPvC {
+
+				chooseNormalRPS
+				chooseRPSLS
+
+			}
+			class Options {
+
+				changeKeyBinds
+				changeVolume
+				resizeWindow
+
+			}
+
+			Titlescreen <|-- Options
+			Titlescreen <|-- ParticipantSelector
+			ParticipantSelector <|-- GamemodeSelectorPvP
+			ParticipantSelector <|-- GamemodeSelectorPvC
+			GamemodeSelectorPvP <|-- RockPaperScissorsNormalPvP
+			GamemodeSelectorPvP <|-- RockPaperScissorsLizardShpockPvP
+			GamemodeSelectorPvC <|-- RockPaperScissorsNormalPvC
+			GamemodeSelectorPvC <|-- RockPaperScissorsLizardShpockPvC
+			
+		</div>
+
+
 		<h2>4. Aufwandsschätzung und Aufteilung</h2>
-		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
+		<p>Etwaige Aufwandsschätzung in Stunden: 80h. 
+		<br>Aufteilung: 
+		<br>Leon:  Main Game	
+		<br>Melih: Erstellung der Bedieneroberfläche(GUI)
+		<br>Jonas: Main Game
+		<br>Burak: Features + Verbesserungen
+		<br>Adham: Erstellung der Bedieneroberfläche(GUI)
+		<br>
+		</p>
 		<h2>Optional: Verweis auf andere HTML Dateien</h2>
 		<p><a href="otherfile.html">Eine weitere HTML-Datei</a></p>
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.miss.at%2Fso-gewinnst-du-bei-schere-stein-papier-oefter%2F&psig=AOvVaw3Ddg8BJ_oosdVQE9LQUnQh&ust=1648836357181000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC6t5748PYCFQAAAAAdAAAAABAD">
 	</main>
 	<footer></footer>
 </body>

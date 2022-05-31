@@ -25,7 +25,7 @@ public class Specialsingle implements ActionListener {
 	JButton button5 = new JButton("Shpock");
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
-	JLabel printline = new JLabel();
+	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Play Again");
@@ -34,48 +34,50 @@ public class Specialsingle implements ActionListener {
 	
 	Specialsingle(){
 		
+	frame.add(printline);
+	printline.setBounds(400, 100, 800, 20);
+	printline.setFont(new Font(null,Font.PLAIN,12));	
+	
 	frame.add(button1);
-	button1.setBounds(50,500,100,50);
+	button1.setBounds(50,200,100,50);
 	button1.addActionListener(this);
 	frame.add(button2);
-	button2.setBounds(200,500,100,50);
+	button2.setBounds(200,200,100,50);
 	button2.addActionListener(this);
 	frame.add(button3);
-	button3.setBounds(350,500,100,50);
+	button3.setBounds(350,200,100,50);
 	button3.addActionListener(this);
 	frame.add(button4);
-	button4.setBounds(500,500,100,50);
+	button4.setBounds(500,200,100,50);
 	button4.addActionListener(this);
 	frame.add(button5);
-	button5.setBounds(650,500,100,50);
+	button5.setBounds(650,200,100,50);
 	button5.addActionListener(this);
 	
+	frame.add(ppick);
+	ppick.setBounds(100, 300, 300, 100);
+	ppick.setFont(new Font(null,Font.PLAIN,12));
+	frame.add(cpick);
+	cpick.setBounds(700, 300, 300, 100);
+	cpick.setFont(new Font(null,Font.PLAIN,12));
+	
+	frame.add(pscore);
+	pscore.setBounds(100, 400, 200, 100);
+	pscore.setFont(new Font(null,Font.PLAIN,12));
+	frame.add(cscore);
+	cscore.setBounds(700, 400, 200, 100);
+	cscore.setFont(new Font(null,Font.PLAIN,12));
+	
 	frame.add(playagain);
-	playagain.setBounds(400, 500, 100, 50);
+	playagain.setBounds(250, 500, 100, 50);
 	playagain.addActionListener(this);
 	playagain.hide();
 	frame.add(back);
-	back.setBounds(1100, 500, 100, 50);
+	back.setBounds(550, 500, 150, 50);
 	back.addActionListener(this);
 	back.hide();
 	
-	frame.add(pscore);
-	pscore.setBounds(100, 100, 200, 100);
-	pscore.setFont(new Font(null,Font.PLAIN,12));
-	frame.add(cscore);
-	cscore.setBounds(1200, 100, 200, 100);
-	cscore.setFont(new Font(null,Font.PLAIN,12));
 	
-	frame.add(printline);
-	printline.setBounds(400, 100, 800, 300);
-	printline.setFont(new Font(null,Font.PLAIN,12));
-	
-	frame.add(ppick);
-	ppick.setBounds(100, 400, 200, 100);
-	ppick.setFont(new Font(null,Font.PLAIN,12));
-	frame.add(cpick);
-	cpick.setBounds(1200, 400, 200, 100);
-	cpick.setFont(new Font(null,Font.PLAIN,12));
 	
 		
 		
@@ -94,13 +96,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 1;
 			SpecialSingleRules.compare();
-			ppick.setText("Schere");
+			ppick.setText("Sie haben Schere ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 			
 			
 		}
@@ -109,13 +111,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 2;
 			SpecialSingleRules.compare();
-			ppick.setText("Stein");
+			ppick.setText("Sie haben Stein ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 			
 			
 		}
@@ -124,13 +126,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 3;
 			SpecialSingleRules.compare();
-			ppick.setText("Papier");
+			ppick.setText("Sie haben Papier ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 			
 			
 		}
@@ -139,13 +141,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 4;
 			SpecialSingleRules.compare();
-			ppick.setText("Lizard");
+			ppick.setText("Sie haben Lizard ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 			
 			
 		}
@@ -154,13 +156,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 5;
 			SpecialSingleRules.compare();
-			ppick.setText("Shpock");
+			ppick.setText("Sie haben Shpock ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 			
 			
 		}
@@ -181,40 +183,40 @@ if(e.getSource()==playagain) {
 			button5.show();
 			
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-			 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			 
-			 printline.setText("");
-			 ppick.setText("");
-			 cpick.setText("");
+			printline.setText("Wählen Sie eine Möglichkeit aus");
+			ppick.setText("");
+			cpick.setText("");
 			
 		}
 
 if(e.getSource()==back) {
 	
-	roundcount = 0;
-	SpecialSingleRules.cscore = 0;
-	SpecialSingleRules.pscore = 0;
+			roundcount = 0;
+			SpecialSingleRules.cscore = 0;
+			SpecialSingleRules.pscore = 0;
 	
-	playagain.hide();
-	back.hide();
+			playagain.hide();
+			back.hide();
 	
-	button1.show();
-	button2.show();
-	button3.show();
-	button4.show();
-	button5.show();
+			button1.show();
+			button2.show();
+			button3.show();
+			button4.show();
+			button5.show();
 	
-	pscore.setText("Player Score: " + SpecialSingleRules.pscore);
-	 cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
+			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
+			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 	 
-	 printline.setText("");
-	 ppick.setText("");
-	 cpick.setText("");
+			printline.setText("");
+			ppick.setText("");
+			cpick.setText("");
 	 
-	 frame.dispose();
-	 GUI gui = new GUI();
+			frame.dispose();
+			GUI gui = new GUI();
 	
-}
+			}
 		
 		
 		
@@ -243,33 +245,33 @@ public void printing() {
 
 public void showPicks() {
 	
-	if(SpecialSingleRules.cpick == 1) {
+		if(SpecialSingleRules.cpick == 1) {
 		
-		cpick.setText("Schere");
-	}
+			cpick.setText("Der Computer hat Schere ausgewählt");
+		}
 	
-if(SpecialSingleRules.cpick == 2) {
+		if(SpecialSingleRules.cpick == 2) {
 		
-		cpick.setText("Stein");
-	}
+			cpick.setText("Der Computer hat Stein ausgewählt");
+		}
 
-if(SpecialSingleRules.cpick == 3) {
+		if(SpecialSingleRules.cpick == 3) {
 
-cpick.setText("Papier");
-}
-if(SpecialSingleRules.cpick == 4) {
+			cpick.setText("Der Computer hat Papier ausgewählt");
+		}
+		if(SpecialSingleRules.cpick == 4) {
 
-cpick.setText("Lizard");
-}
-if(SpecialSingleRules.cpick == 5) {
+			cpick.setText("Der Computer hat Lizard ausgewählt");
+		}
+		if(SpecialSingleRules.cpick == 5) {
 
-cpick.setText("Shpock");
-}
+			cpick.setText("Der Computer hat Shpock ausgewählt");
+		}
 	
 }
 public void announceWinner() {
 	
-	if(GUI.winscore == roundcount || SpecialSingleRules.pscore*2 > GUI.winscore || SpecialSingleRules.cscore*2 > GUI.winscore) {
+		if(GUI.winscore == roundcount || SpecialSingleRules.pscore*2 > GUI.winscore || SpecialSingleRules.cscore*2 > GUI.winscore) {
 		
 		if(SpecialSingleRules.pscore > SpecialSingleRules.cscore) {
 			

@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,9 +17,12 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	public static int a;
 	public static int roundcount;
 	
+	
+	Icon bild1= new ImageIcon(getClass().getResource("src/bild1.jpg"));
+	
 	JFrame frame = new JFrame();
 	JPanel panel1 = new JPanel();
-	JButton button1 = new JButton("Schere");
+	JButton button1 = new JButton(bild1);
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
 	JLabel pscore = new JLabel("Player Score: 0");
@@ -30,8 +35,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JButton back = new JButton("Back to Title");
 	
 	
+	
 	Normalsingle() {
-		
 		frame.setLayout(null);
 		frame.setLocation(0, 0);
 		frame.add(printline);

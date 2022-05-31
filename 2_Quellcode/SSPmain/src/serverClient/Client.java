@@ -10,8 +10,8 @@ public class Client {
 	
 	public static void main(String[] args) {
 		
-		Client client = new Client("localhost", 8100);
-		client.sendMessage("Moin");
+		Client client = new Client("", 8100);
+		client.sendMessage("Halli Hallo");
 		
 	}
 	

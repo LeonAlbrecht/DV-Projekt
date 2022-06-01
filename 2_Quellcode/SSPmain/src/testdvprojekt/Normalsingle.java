@@ -16,6 +16,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	
 	public static int a;
 	public static int roundcount;
+	public static int winSeries;
+	public static String name;
 	
 	
 	//Icon bild1= new ImageIcon(getClass().getResource("SSPmain/bild1.jpg"));
@@ -25,11 +27,13 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JButton button1 = new JButton("Schere");
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
+	JButton highscore = new JButton("Highscores");
 	JLabel pscore = new JLabel("Player Score: 0");
 	JLabel cscore = new JLabel("Computer Score: 0");
-	JLabel printline = new JLabel("W‰hlen Sie Schere, Stein oder Papier aus");
+	JLabel printline = new JLabel("W√§hlen Sie Schere, Stein oder Papier aus");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
+	JLabel nameTag = new JLabel(name);
 	
 	JButton playagain = new JButton("Play Again");
 	JButton back = new JButton("Back to Title");
@@ -37,6 +41,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	
 	
 	Normalsingle() {
+		
 		frame.setLayout(null);
 		frame.setLocation(0, 0);
 		frame.add(printline);
@@ -53,6 +58,10 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		button3.setBounds(700,200,100,50);
 		button3.addActionListener(this);
 		
+		frame.add(highscore);
+		highscore.setBounds(1300, 550, 100, 50);
+		highscore.addActionListener(this);
+		
 		frame.add(ppick);
 		ppick.setBounds(100, 300, 300, 100);
 		ppick.setFont(new Font(null,Font.PLAIN,12));
@@ -66,6 +75,10 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.add(cscore);
 		cscore.setBounds(700, 400, 200, 50);
 		cscore.setFont(new Font(null,Font.PLAIN,12));
+		
+		frame.add(nameTag);
+		nameTag.setBounds(50,50,200,50);
+		nameTag.setFont(new Font(null,Font.PLAIN,12));
 		
 		frame.add(playagain);
 		playagain.setBounds(250, 500, 100, 50);
@@ -82,9 +95,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieﬂen wird Programm geschlossen
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlie√üen wird Programm geschlossen
 		frame.add(panel1, BorderLayout.CENTER);					
-		frame.setSize(1500, 700);								//grˆﬂe des Rahmens
+		frame.setSize(1500, 700);								//gr√∂√üe des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);	
 		
@@ -98,7 +111,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button1) {
 			
 			 a = 1;
-			 ppick.setText("Sie haben Schere ausgew‰hlt");
+			 ppick.setText("Sie haben Schere ausgew√§hlt");
 			 testmain2.compare();
 			 showPicks();
 			 pscore.setText("Player Score: " + testmain2.pscore);
@@ -111,7 +124,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button2) {
 			
 			a = 2;
-			ppick.setText("Sie haben Stein ausgew‰hlt");
+			ppick.setText("Sie haben Stein ausgew√§hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -125,7 +138,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button3) {
 			
 			a = 3;
-			ppick.setText("Sie haben Papier ausgew‰hlt");
+			ppick.setText("Sie haben Papier ausgew√§hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -160,6 +173,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		if(e.getSource()==back) {
 			
+			Highscore.compareNormal();
+			Highscore.saveScores();
+			
 			roundcount = 0;
 			testmain2.cscore = 0;
 			testmain2.pscore = 0;
@@ -178,9 +194,18 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			 ppick.setText("");
 			 cpick.setText("");
 			 
+			 winSeries = 0;
+			 
 			 frame.dispose();
 			 GUI gui = new GUI();
 			
+		}
+		
+		if(e.getSource()==highscore) {
+			
+			Highscore.compareNormal();
+			Highscore.saveScores();
+			Highscore highscore = new Highscore();
 		}
 		
 	}
@@ -214,6 +239,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				
 				printline.setText("Du hast das Spiel gewonnen");
 				
+				winSeries++;
+				
 				button1.hide();
 				button2.hide();
 				button3.hide();
@@ -225,6 +252,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			if(testmain2.cscore > testmain2.pscore) {
 				
 				printline.setText("Du hast das Spiel verloren");
+				
+				winSeries = 0;
 				
 				button1.hide();
 				button2.hide();
@@ -261,17 +290,17 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		if(testmain2.cpick == 1) {
 			
-			cpick.setText("Der Computer hat Schere ausgew‰hlt");
+			cpick.setText("Der Computer hat Schere ausgew√§hlt");
 		}
 		
 if(testmain2.cpick == 2) {
 			
-			cpick.setText("Der Computer hat Stein ausgew‰hlt");
+			cpick.setText("Der Computer hat Stein ausgew√§hlt");
 		}
 
 if(testmain2.cpick == 3) {
 	
-	cpick.setText("Der Computer hat Papier ausgew‰hlt");
+	cpick.setText("Der Computer hat Papier ausgew√§hlt");
 }
 		
 	}

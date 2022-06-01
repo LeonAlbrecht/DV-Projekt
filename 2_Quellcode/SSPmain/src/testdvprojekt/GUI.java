@@ -77,17 +77,17 @@ public class GUI implements ActionListener{
 		
 		//Rahmen
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schließen wird Programm geschlossen
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieï¿½en wird Programm geschlossen
 		frame.add(panel);					
-		frame.setSize(1500, 700);								//größe des Rahmens
+		frame.setSize(1500, 700);								//grï¿½ï¿½e des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);									//Rahmen wird angezeig
 		
-		//Menü-Panel
+		//Menï¿½-Panel
 		panel.setLayout(null);									//kein Layout
-		panel.add(title);										//Titel hinzufügen
+		panel.add(title);										//Titel hinzufï¿½gen
 		title.setBounds(500, 10, 500, 30);						//Titel Positionieren
-		panel.add(sbutton);										//button hinzufügen
+		panel.add(sbutton);										//button hinzufï¿½gen
 		sbutton.setBounds(560, 150, 80, 25);					//button positionieren
 		sbutton.addActionListener(this);
 		Sbutton.addActionListener(this); 						//Interaktionsfunktion button
@@ -103,7 +103,7 @@ public class GUI implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		title.setText("Wählen Sie Ihre Einstellungen aus");		//Reaktion nach ausführen des Buttons
+		title.setText("Wï¿½hlen Sie Ihre Einstellungen aus");		//Reaktion nach ausfï¿½hren des Buttons
 		sbutton.hide();
 		panel.add(Sbutton);
 		Sbutton.setBounds(560, 300, 80, 25);					//Neuer Startbutton Positionieren
@@ -193,7 +193,7 @@ public class GUI implements ActionListener{
 		}
 		if(m1.getBackground().equals(Color.green) && single.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
 			frame.dispose();
-			Normalsingle npvc= new Normalsingle();
+			FillerClassName name= new FillerClassName();
 		}
 		if(m2.getBackground().equals(Color.green) && single.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
 			frame.dispose();

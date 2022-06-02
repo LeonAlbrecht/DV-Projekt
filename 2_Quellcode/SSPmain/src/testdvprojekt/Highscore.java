@@ -1,5 +1,6 @@
 package testdvprojekt;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -68,6 +69,7 @@ public class Highscore implements ActionListener {
 		frame.setLocation(0,0);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Highscore List");
+		frame.getContentPane().setBackground(Color.cyan);
 		
 	}
 	

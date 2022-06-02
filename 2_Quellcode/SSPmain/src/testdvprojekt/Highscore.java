@@ -75,11 +75,27 @@ public class Highscore implements ActionListener {
 		
 		if(Normalsingle.winSeries > firstScore) {
 			
+			fifthName = fourthName;
+			fifthScore = fourthScore;
+			fourthName = thirdName;
+			fourthScore = thirdScore;
+			thirdName = secondName;
+			thirdScore = secondScore;
+			secondName = firstName;
+			secondScore = firstScore;
+			
 			firstScore = Normalsingle.winSeries;
 			firstName = Normalsingle.name;
 		} else {
 			
 			if(Normalsingle.winSeries > secondScore) {
+				
+				fifthName = fourthName;
+				fifthScore = fourthScore;
+				fourthName = thirdName;
+				fourthScore = thirdScore;
+				thirdName = secondName;
+				thirdScore = secondScore;
 				
 				secondScore = Normalsingle.winSeries;
 				secondName = Normalsingle.name;
@@ -87,11 +103,20 @@ public class Highscore implements ActionListener {
 				
 				if(Normalsingle.winSeries > thirdScore) {
 					
+					fifthName = fourthName;
+					fifthScore = fourthScore;
+					fourthName = thirdName;
+					fourthScore = thirdScore;
+					
+					
 					thirdScore = Normalsingle.winSeries;
 					thirdName = Normalsingle.name;
 				} else {
 					
 					if(Normalsingle.winSeries > fourthScore) {
+						
+						fifthName = fourthName;
+						fifthScore = fourthScore;
 						
 						fourthScore = Normalsingle.winSeries;
 						fourthName = Normalsingle.name;

@@ -25,7 +25,7 @@ public class FillerClassName implements ActionListener{
 		frame.setLocation(0,0);
 		
 		frame.add(name);
-		name.setBounds(600, 300, 300, 100);
+		name.setBounds(500, 300, 300, 50);
 		name.setFont(new Font(null,Font.PLAIN,12));
 		
 		frame.add(label);
@@ -33,7 +33,7 @@ public class FillerClassName implements ActionListener{
 		label.setFont(new Font(null,Font.PLAIN,12));
 		
 		frame.add(button);
-		button.setBounds(900, 300, 100, 100);
+		button.setBounds(800, 300, 100, 50);
 		button.addActionListener(this);
 		
 		

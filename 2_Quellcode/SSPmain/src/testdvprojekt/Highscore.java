@@ -28,6 +28,7 @@ public class Highscore implements ActionListener {
 	
 	JFrame frame = new JFrame();
 	JButton back = new JButton("back");
+	JLabel highscoreTitel =new JLabel("Highscoreliste:");
 	JLabel highscore1 = new JLabel();
 	JLabel highscore2 = new JLabel();
 	JLabel highscore3 = new JLabel();
@@ -38,6 +39,7 @@ public class Highscore implements ActionListener {
 		
 		frame.setLayout(null);
 		
+		highscoreTitel.setBounds(400,0,700,50);
 		highscore1.setBounds(400,50,700,50);
 		highscore1.setText(firstName + ": " + firstScore);
 		highscore2.setBounds(400,150,700,50);
@@ -49,6 +51,7 @@ public class Highscore implements ActionListener {
 		highscore5.setBounds(400,450,700,50);
 		highscore5.setText(fifthName + ": " + fifthScore);
 		
+		frame.add(highscoreTitel);
 		frame.add(highscore1);
 		frame.add(highscore2);
 		frame.add(highscore3);

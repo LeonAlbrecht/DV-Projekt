@@ -30,7 +30,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JButton highscore = new JButton("Highscores");
 	JLabel pscore = new JLabel("Player Score: 0");
 	JLabel cscore = new JLabel("Computer Score: 0");
-	JLabel printline = new JLabel("W√§hlen Sie Schere, Stein oder Papier aus");
+	JLabel printline = new JLabel("W‰hlen Sie Schere, Stein oder Papier aus");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	JLabel nameTag = new JLabel(name);
@@ -59,7 +59,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		button3.addActionListener(this);
 		
 		frame.add(highscore);
-		highscore.setBounds(1300, 550, 100, 50);
+		highscore.setBounds(700, 500, 100, 50);
 		highscore.addActionListener(this);
 		
 		frame.add(ppick);
@@ -85,7 +85,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		playagain.addActionListener(this);
 		playagain.hide();
 		frame.add(back);
-		back.setBounds(550, 500, 150, 50);
+		back.setBounds(450, 500, 150, 50);
 		back.addActionListener(this);
 		back.hide();
 		
@@ -111,7 +111,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button1) {
 			
 			 a = 1;
-			 ppick.setText("Sie haben Schere ausgew√§hlt");
+			 ppick.setText("Sie haben Schere ausgew‰hlt");
 			 testmain2.compare();
 			 showPicks();
 			 pscore.setText("Player Score: " + testmain2.pscore);
@@ -124,7 +124,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button2) {
 			
 			a = 2;
-			ppick.setText("Sie haben Stein ausgew√§hlt");
+			ppick.setText("Sie haben Stein ausgew‰hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -138,7 +138,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(e.getSource()==button3) {
 			
 			a = 3;
-			ppick.setText("Sie haben Papier ausgew√§hlt");
+			ppick.setText("Sie haben Papier ausgew‰hlt");
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
@@ -290,17 +290,17 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		if(testmain2.cpick == 1) {
 			
-			cpick.setText("Der Computer hat Schere ausgew√§hlt");
+			cpick.setText("Der Computer hat Schere ausgew‰hlt");
 		}
 		
 if(testmain2.cpick == 2) {
 			
-			cpick.setText("Der Computer hat Stein ausgew√§hlt");
+			cpick.setText("Der Computer hat Stein ausgew‰hlt");
 		}
 
 if(testmain2.cpick == 3) {
 	
-	cpick.setText("Der Computer hat Papier ausgew√§hlt");
+	cpick.setText("Der Computer hat Papier ausgew‰hlt");
 }
 		
 	}

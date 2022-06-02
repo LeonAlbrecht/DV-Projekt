@@ -73,7 +73,7 @@ public class Specialsingle implements ActionListener {
 	playagain.addActionListener(this);
 	playagain.hide();
 	frame.add(back);
-	back.setBounds(550, 500, 150, 50);
+	back.setBounds(450, 500, 150, 50);
 	back.addActionListener(this);
 	back.hide();
 	

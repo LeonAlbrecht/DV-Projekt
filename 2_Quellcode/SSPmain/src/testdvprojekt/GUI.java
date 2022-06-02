@@ -83,7 +83,7 @@ public class GUI implements ActionListener{
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);									//Rahmen wird angezeig
 		
-		//Menü-Panel
+		//Menï¿½-Panel
 		panel.setLayout(null);									//kein Layout
 		panel.add(title);										//Titel hinzufï¿½gen
 		title.setBounds(500, 10, 500, 30);						//Titel Positionieren
@@ -103,7 +103,7 @@ public class GUI implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		title.setText("Wählen Sie Ihre Einstellungen aus");		//Reaktion nach ausfï¿½hren des Buttons
+		title.setText("Wï¿½hlen Sie Ihre Einstellungen aus");		//Reaktion nach ausfï¿½hren des Buttons
 		sbutton.hide();
 		panel.add(Sbutton);
 		Sbutton.setBounds(560, 300, 80, 25);					//Neuer Startbutton Positionieren
@@ -237,7 +237,7 @@ public class GUI implements ActionListener{
 	public static void main(String[] args) {
 		new GUI(); {
 		}
-		
+		PlayMusic.play();
 	}
 	
 	

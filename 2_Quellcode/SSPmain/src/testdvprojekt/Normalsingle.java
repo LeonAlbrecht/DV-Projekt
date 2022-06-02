@@ -253,6 +253,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				
 				printline.setText("Du hast das Spiel verloren");
 				
+				Highscore.compareNormal();
 				winSeries = 0;
 				
 				button1.hide();

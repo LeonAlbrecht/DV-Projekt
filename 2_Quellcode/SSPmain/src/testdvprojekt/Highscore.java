@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 public class Highscore implements ActionListener {
 	
-
+ 
 	public static String firstName;
 	public static int firstScore;
 	public static String secondName;
@@ -41,15 +41,15 @@ public class Highscore implements ActionListener {
 		
 		highscoreTitel.setBounds(400,0,700,50);
 		highscore1.setBounds(400,50,700,50);
-		highscore1.setText(firstName + ": " + firstScore);
+		highscore1.setText("1. Platz:  "+firstName + ": " + firstScore);
 		highscore2.setBounds(400,150,700,50);
-		highscore2.setText(secondName + ": " + secondScore);
+		highscore2.setText("2. Platz:  "+secondName + ": " + secondScore);
 		highscore3.setBounds(400,250,700,50);
-		highscore3.setText(thirdName + ": " + thirdScore);
+		highscore3.setText("3. Platz:  "+thirdName + ": " + thirdScore);
 		highscore4.setBounds(400,350,700,50);
-		highscore4.setText(fourthName + ": " + fourthScore);
+		highscore4.setText("4. Platz:  "+fourthName + ": " + fourthScore);
 		highscore5.setBounds(400,450,700,50);
-		highscore5.setText(fifthName + ": " + fifthScore);
+		highscore5.setText("5. Platz:  "+fifthName + ": " + fifthScore);
 		
 		frame.add(highscoreTitel);
 		frame.add(highscore1);
@@ -59,7 +59,7 @@ public class Highscore implements ActionListener {
 		frame.add(highscore5);
 		
 		frame.add(back);
-		back.setBounds(1300, 550, 100, 50);
+		back.setBounds(700, 550, 100, 50);
 		back.addActionListener(this);
 		
 		

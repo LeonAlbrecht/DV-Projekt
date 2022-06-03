@@ -20,11 +20,11 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	public static String name;
 	
 	
-	//Icon bild1= new ImageIcon(getClass().getResource("SSPmain/bild1.jpg"));
+	Icon bild1= new ImageIcon(getClass().getResource("C:\\Users\\leona\\OneDrive\\Dokumente\\Studium\\MKT3\\Ang. Informatik\\DV-Projekt\\2_Quellcode\\SSPmain\\bild1.jpg"));
 	
 	JFrame frame = new JFrame();
-	JPanel panel1 = new JPanel();
-	JButton button1 = new JButton("Schere");
+	JPanel panel1 = new JPanel(); 
+	JButton button1 = new JButton(bild1);
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
 	JButton highscore = new JButton("Highscores");
@@ -32,7 +32,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JLabel cscore = new JLabel("Computer Score: 0");
 	JLabel printline = new JLabel("Wählen Sie Schere, Stein oder Papier aus");
 	JLabel ppick = new JLabel();
-	JLabel cpick = new JLabel();
+	JLabel cpick = new JLabel(); 
 	JLabel nameTag = new JLabel(name);
 	
 	JButton playagain = new JButton("Play Again");

@@ -20,11 +20,11 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	public static String name;
 	
 	
-	Icon bild1= new ImageIcon(getClass().getResource("C:\\Users\\leona\\OneDrive\\Dokumente\\Studium\\MKT3\\Ang. Informatik\\DV-Projekt\\2_Quellcode\\SSPmain\\bild1.jpg"));
+	//Icon bild1= new ImageIcon(getClass().getResource("C:src\\bild1.jpg"));
 	
 	JFrame frame = new JFrame();
 	JPanel panel1 = new JPanel(); 
-	JButton button1 = new JButton(bild1);
+	JButton button1 = new JButton("Schere");
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
 	JButton highscore = new JButton("Highscores");

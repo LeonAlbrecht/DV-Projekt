@@ -12,7 +12,7 @@ public class PlayMusic {
 
 public static void play() {
   try {
-   File file = new File("C:src\\testdvprojekt\\Steve Jablonsky - Arrival To Earth (Official Audio) (1).wav");
+   File file = new File("src\\testdvprojekt\\Steve Jablonsky - Arrival To Earth (Official Audio) (1).wav");
    Clip clip = AudioSystem.getClip();
    clip.open(AudioSystem.getAudioInputStream(file));
    clip.start();

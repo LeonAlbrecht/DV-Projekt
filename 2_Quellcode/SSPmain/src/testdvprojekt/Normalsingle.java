@@ -110,6 +110,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		if(e.getSource()==button1) {
 			
+			PlayMusic.playButton();
+			
 			 a = 1;
 			 ppick.setText("Sie haben Schere ausgewählt");
 			 testmain2.compare();
@@ -122,6 +124,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		}
 		
 		if(e.getSource()==button2) {
+			
+			PlayMusic.playButton();
 			
 			a = 2;
 			ppick.setText("Sie haben Stein ausgewählt");
@@ -137,6 +141,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		if(e.getSource()==button3) {
 			
+			PlayMusic.playButton();
+			
 			a = 3;
 			ppick.setText("Sie haben Papier ausgewählt");
 			testmain2.compare();
@@ -150,6 +156,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		}
 		
 		if(e.getSource()==playagain) {
+			
+			PlayMusic.playButton();
 			
 			roundcount = 0;
 			testmain2.cscore = 0;
@@ -172,6 +180,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		}
 		
 		if(e.getSource()==back) {
+			
+			PlayMusic.playButton();
 			
 			Highscore.compareNormal();
 			Highscore.saveScores();
@@ -202,6 +212,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		}
 		
 		if(e.getSource()==highscore) {
+			
+			PlayMusic.playButton();
 			
 			Highscore.compareNormal();
 			Highscore.saveScores();
@@ -239,6 +251,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				
 				printline.setText("Du hast das Spiel gewonnen");
 				
+				PlayMusic.playWin();
+				
 				winSeries++;
 				
 				button1.hide();
@@ -252,6 +266,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			if(testmain2.cscore > testmain2.pscore) {
 				
 				printline.setText("Du hast das Spiel verloren");
+				
+				PlayMusic.playLoose();
 				
 				Highscore.compareNormal();
 				winSeries = 0;

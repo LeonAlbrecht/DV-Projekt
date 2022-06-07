@@ -2,9 +2,14 @@ package testdvprojekt;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -19,9 +24,6 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	public static int winSeries;
 	public static String name;
 	
-	
-	//Icon bild1= new ImageIcon(getClass().getResource("C:src\\bild1.jpg"));
-	
 	JFrame frame = new JFrame();
 	JPanel panel1 = new JPanel(); 
 	JButton button1 = new JButton("Schere");
@@ -34,13 +36,15 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel(); 
 	JLabel nameTag = new JLabel(name);
-	
 	JButton playagain = new JButton("Play Again");
 	JButton back = new JButton("Back to Title");
-	
+	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
+	ImageIcon icon2 =new ImageIcon("pictures/bild2.jpg");
+	ImageIcon icon3 =new ImageIcon("pictures/bild3.jpg");
 	
 	
 	Normalsingle() {
+		
 		
 		frame.setLayout(null);
 		frame.setLocation(0, 0);
@@ -51,12 +55,18 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.add(button1);
 		button1.setBounds(100,200,100,50);
 		button1.addActionListener(this);
+		button1.setIcon(icon1);
+		icon1.setImage(icon1.getImage().getScaledInstance(110,80,Image.SCALE_DEFAULT));
 		frame.add(button2);
 		button2.setBounds(400,200,100,50);
 		button2.addActionListener(this);
+		button2.setIcon(icon2);
+		icon2.setImage(icon2.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
 		frame.add(button3);
 		button3.setBounds(700,200,100,50);
 		button3.addActionListener(this);
+		button3.setIcon(icon3);
+		icon3.setImage(icon3.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
 		
 		frame.add(highscore);
 		highscore.setBounds(700, 500, 100, 50);

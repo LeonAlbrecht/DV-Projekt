@@ -2,9 +2,11 @@ package testdvprojekt;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,6 +32,11 @@ public class Specialsingle implements ActionListener {
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Play Again");
 	JButton back = new JButton("Back to title");
+	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
+	ImageIcon icon2 =new ImageIcon("pictures/bild2.jpg");
+	ImageIcon icon3 =new ImageIcon("pictures/bild3.jpg");
+	ImageIcon icon4 =new ImageIcon("pictures/bild4.jpg");
+	ImageIcon icon5 =new ImageIcon("pictures/bild5.jpg");
 	
 	
 	Specialsingle(){
@@ -41,18 +48,28 @@ public class Specialsingle implements ActionListener {
 	frame.add(button1);
 	button1.setBounds(50,200,100,50);
 	button1.addActionListener(this);
+	button1.setIcon(icon1);
+	icon1.setImage(icon1.getImage().getScaledInstance(110,80,Image.SCALE_DEFAULT));
 	frame.add(button2);
 	button2.setBounds(200,200,100,50);
 	button2.addActionListener(this);
+	button2.setIcon(icon2);
+	icon2.setImage(icon2.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
 	frame.add(button3);
 	button3.setBounds(350,200,100,50);
 	button3.addActionListener(this);
+	button3.setIcon(icon3);
+	icon3.setImage(icon3.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
 	frame.add(button4);
 	button4.setBounds(500,200,100,50);
 	button4.addActionListener(this);
+	button4.setIcon(icon4);
+	icon4.setImage(icon4.getImage().getScaledInstance(120,60,Image.SCALE_DEFAULT));
 	frame.add(button5);
 	button5.setBounds(650,200,100,50);
 	button5.addActionListener(this);
+	button5.setIcon(icon5);
+	icon5.setImage(icon5.getImage().getScaledInstance(110, 60, Image.SCALE_DEFAULT));
 	
 	frame.add(ppick);
 	ppick.setBounds(100, 300, 300, 100);

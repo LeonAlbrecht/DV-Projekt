@@ -11,7 +11,11 @@ import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
+/**
+ * Setzt den Highscore des Spiels
+ * @author jonas
+ *
+ */
 public class Highscore implements ActionListener {
 	
  
@@ -35,7 +39,9 @@ public class Highscore implements ActionListener {
 	JLabel highscore3 = new JLabel();
 	JLabel highscore4 = new JLabel();
 	JLabel highscore5 = new JLabel();
-	
+/**
+ * Frame Anpassungen(Größe, 
+ */
 	public Highscore() {
 		
 		frame.setLayout(null);
@@ -72,7 +78,9 @@ public class Highscore implements ActionListener {
 		frame.getContentPane().setBackground(Color.cyan);
 		
 	}
-	
+	/**
+	 * Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
+	 */
 	public static void compareNormal() {
 		
 		if(Normalsingle.winSeries > firstScore) {
@@ -134,7 +142,9 @@ public class Highscore implements ActionListener {
 			}
 		}
 	}
-	
+	/**
+	 * Die Methode schreibt den Namen in die Highscore Liste.
+	 */
 	public static void saveScores() {
 		
 		try {
@@ -161,7 +171,9 @@ public class Highscore implements ActionListener {
 			
 		}
 	}
-	
+	/**
+	 * Hier wird erkannt in welche Zeile der Name eingetragen wird.
+	 */
 	public static void loadScores() {
 		
 		try {
@@ -187,7 +199,9 @@ public class Highscore implements ActionListener {
 			System.out.println("File not Found!");
 		}
 	}
-
+/**
+ * Zurück Button.
+ */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		

@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Specialduo {
+	
+	
 	JFrame frame = new JFrame();
 	JPanel panel1= new JPanel();
 	

@@ -9,17 +9,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class FillerClassName implements ActionListener{
-	
+public class FillerClassName2 implements ActionListener{
 	
 	JFrame frame = new JFrame();
 	JTextField name = new JTextField();
 	JLabel label = new JLabel("What's your name?");
 	JButton button = new JButton("OK");
 	
-	
-	
-	public FillerClassName() {
+	public FillerClassName2() {
 		
 		frame.setLayout(null);
 		frame.setLocation(0,0);
@@ -41,23 +38,17 @@ public class FillerClassName implements ActionListener{
 		frame.setSize(1500,700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Choose Name!");
-		
 	}
-
-
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource()==button) {
-			
-			PlayMusic.playButton();
-			
-			Normalsingle.name = name.getText();
-			Normalsingle npvc = new Normalsingle();
-			Highscore.loadScores();
-			frame.dispose();
-			
+		
+		Normalduo.name = name.getText();
+		Normalduo npvp = new Normalduo();
+		frame.dispose();
+		
 		}
 		
 	}

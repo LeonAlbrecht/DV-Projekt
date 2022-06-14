@@ -147,34 +147,52 @@ public class GUI implements ActionListener{
 		 
 			
 		if(e.getSource()==r3) {
+			
+			PlayMusic.playButton();
+			
 			r3.setBackground(Color.green);
 			r5.setBackground(null);
 			r7.setBackground(null);
 		}
 		
 		if(e.getSource()==r5){
+			
+			PlayMusic.playButton();
+			
 			r5.setBackground(Color.green);
 			r3.setBackground(null);
 			r7.setBackground(null);
 		}
 		
 		if(e.getSource()==r7){
+			
+			PlayMusic.playButton();
+			
 			r7.setBackground(Color.green);
 			r5.setBackground(null);
 			r3.setBackground(null); 	
 		}
 		
 		if(e.getSource()==m1) {
-		m1.setBackground(Color.green);
+		
+			PlayMusic.playButton();
+			
+			m1.setBackground(Color.green);
 			m2.setBackground(null);
 		}
 		
 		if(e.getSource()==m2) {
+			
+			PlayMusic.playButton();
+			
 			m2.setBackground(Color.green);
 			m1.setBackground(null);
 		}
 		
 		if(e.getSource()==single) {
+			
+			PlayMusic.playButton();
+			
 			single.setBackground(Color.green);
 				duo.setBackground(null);
 				P1Textfeld.setBounds(340, 200, 0, 0);
@@ -184,6 +202,9 @@ public class GUI implements ActionListener{
 		}
 		
 		if(e.getSource()==duo) {
+			
+			PlayMusic.playButton();
+			
 			duo.setBackground(Color.green);
 				single.setBackground(null);
 				P1Textfeld.setBounds(340, 200, 150, 20);
@@ -192,23 +213,37 @@ public class GUI implements ActionListener{
 				P2Eingabefeld.setBounds(460, 225, 150, 20);
 		}
 		if(m1.getBackground().equals(Color.green) && single.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			
+			PlayMusic.playButton();
+			
 			frame.dispose();
 			FillerClassName name= new FillerClassName();
 		}
 		if(m2.getBackground().equals(Color.green) && single.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			
+			PlayMusic.playButton();
+			
 			frame.dispose();
 			Specialsingle npvc= new Specialsingle();
 		}
 		if(m1.getBackground().equals(Color.green) && duo.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			
+			PlayMusic.playButton();
+			
 			frame.dispose();
-			Normalduo npvc= new Normalduo();
+			FillerClassName2 name2 = new FillerClassName2();
 		}
 		if(m2.getBackground().equals(Color.green) && duo.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
+			
+			PlayMusic.playButton();
+			
 			frame.dispose();
 			Specialduo npvc= new Specialduo();
 		}
 
 		if(e.getSource() == r3) {
+			
+			PlayMusic.playButton();
 			
 			winscore = 3;
 			
@@ -216,11 +251,15 @@ public class GUI implements ActionListener{
 		
 		if(e.getSource() == r5) {
 			
+			PlayMusic.playButton();
+			
 			winscore = 5;
 			
 		}
 		
 		if(e.getSource() == r7) {
+			
+			PlayMusic.playButton();
 			
 			winscore = 7;
 			

@@ -207,6 +207,8 @@ public class Highscore implements ActionListener {
 		
 		if(e.getSource()==back) {
 			
+			PlayMusic.playButton();
+			
 			frame.dispose();
 		}
 		

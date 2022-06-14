@@ -111,6 +111,8 @@ public class Specialsingle implements ActionListener {
 		
 		if(e.getSource()==button1) {
 			
+			PlayMusic.playButton();
+			
 			pick = 1;
 			SpecialSingleRules.compare();
 			ppick.setText("Sie haben Schere ausgewählt");
@@ -125,6 +127,8 @@ public class Specialsingle implements ActionListener {
 		}
 		
 		if(e.getSource()==button2) {
+			
+			PlayMusic.playButton();
 			
 			pick = 2;
 			SpecialSingleRules.compare();
@@ -141,6 +145,8 @@ public class Specialsingle implements ActionListener {
 		
 		if(e.getSource()==button3) {
 			
+			PlayMusic.playButton();
+			
 			pick = 3;
 			SpecialSingleRules.compare();
 			ppick.setText("Sie haben Papier ausgewählt");
@@ -155,6 +161,8 @@ public class Specialsingle implements ActionListener {
 		}
 		
 		if(e.getSource()==button4) {
+			
+			PlayMusic.playButton();
 			
 			pick = 4;
 			SpecialSingleRules.compare();
@@ -171,6 +179,8 @@ public class Specialsingle implements ActionListener {
 		
 		if(e.getSource()==button5) {
 			
+			PlayMusic.playButton();
+			
 			pick = 5;
 			SpecialSingleRules.compare();
 			ppick.setText("Sie haben Shpock ausgewählt");
@@ -186,7 +196,9 @@ public class Specialsingle implements ActionListener {
 		
 if(e.getSource()==playagain) {
 			
-			roundcount = 0;
+	PlayMusic.playButton();
+	
+	roundcount = 0;
 			SpecialSingleRules.cscore = 0;
 			SpecialSingleRules.pscore = 0;
 			
@@ -210,7 +222,9 @@ if(e.getSource()==playagain) {
 
 if(e.getSource()==back) {
 	
-			roundcount = 0;
+	PlayMusic.playButton();
+	
+	roundcount = 0;
 			SpecialSingleRules.cscore = 0;
 			SpecialSingleRules.pscore = 0;
 	
@@ -294,6 +308,8 @@ public void announceWinner() {
 			
 			printline.setText("Du hast das Spiel gewonnen");
 			
+			PlayMusic.playWin();
+			
 			button1.hide();
 			button2.hide();
 			button3.hide();
@@ -307,6 +323,8 @@ public void announceWinner() {
 		if(SpecialSingleRules.cscore > SpecialSingleRules.pscore) {
 			
 			printline.setText("Du hast das Spiel verloren");
+			
+			PlayMusic.playLoose();
 			
 			button1.hide();
 			button2.hide();
@@ -323,6 +341,8 @@ public void announceWinner() {
 		if(SpecialSingleRules.cscore == SpecialSingleRules.pscore) {
 			
 			printline.setText("Dieses Spiel endet mit einem Unentschieden");
+			
+			PlayMusic.playDraw();
 			
 			button1.hide();
 			button2.hide();

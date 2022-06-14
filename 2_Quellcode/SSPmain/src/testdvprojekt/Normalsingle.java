@@ -294,6 +294,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			}
 			if(testmain2.cscore == testmain2.pscore) {
 				
+				PlayMusic.playDraw();
+				
 				printline.setText("Dieses Spiel endet mit einem Unentschieden");
 				
 				button1.hide();

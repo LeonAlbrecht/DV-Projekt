@@ -5,16 +5,23 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.Action;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.RootPaneContainer;
 
 public class GUI implements ActionListener{
 	
@@ -42,12 +49,9 @@ public class GUI implements ActionListener{
 	JTextField P2Eingabefeld;
 	JButton test;
 	
-	Graphics2D g2D; 
-	
 	
 	
 	public GUI() {
-		
 		panel= new JPanel();
 		frame= new JFrame();
 		title= new JLabel("Willkommen zu Schere, Stein, Papier");
@@ -75,14 +79,16 @@ public class GUI implements ActionListener{
 		
 		
 		
-		//Rahmen
+		
+        frame.pack();
+        frame.setVisible(true);
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlie�en wird Programm geschlossen
 		frame.add(panel);					
 		frame.setSize(1500, 700);								//gr��e des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);									//Rahmen wird angezeig
-		
+
 		//Men�-Panel
 		panel.setLayout(null);									//kein Layout
 		panel.add(title);										//Titel hinzuf�gen
@@ -98,6 +104,7 @@ public class GUI implements ActionListener{
 		m2.addActionListener(this);
 		single.addActionListener(this);
 		duo.addActionListener(this);
+		
 	}
 	
 

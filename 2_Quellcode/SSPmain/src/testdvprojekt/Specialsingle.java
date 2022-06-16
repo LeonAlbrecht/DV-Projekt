@@ -17,6 +17,9 @@ public class Specialsingle implements ActionListener {
 	public static int pick;
 	
 	public static int roundcount;
+	public static int winSeries;
+	
+	public static String name;
 	
 	JFrame frame = new JFrame();
 	JPanel panel1= new JPanel();
@@ -25,6 +28,7 @@ public class Specialsingle implements ActionListener {
 	JButton button3 = new JButton("Papier");
 	JButton button4 = new JButton("Lizard");
 	JButton button5 = new JButton("Shpock");
+	JButton highscore = new JButton("Highscores");
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
 	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus");
@@ -32,6 +36,7 @@ public class Specialsingle implements ActionListener {
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Play Again");
 	JButton back = new JButton("Back to title");
+	JLabel nameTag = new JLabel(name);
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
 	ImageIcon icon2 =new ImageIcon("pictures/bild2.jpg");
 	ImageIcon icon3 =new ImageIcon("pictures/bild3.jpg");
@@ -71,12 +76,20 @@ public class Specialsingle implements ActionListener {
 	button5.setIcon(icon5);
 	icon5.setImage(icon5.getImage().getScaledInstance(110, 60, Image.SCALE_DEFAULT));
 	
+	frame.add(highscore);
+	highscore.setBounds(700, 500, 100, 50);
+	highscore.addActionListener(this);
+	
 	frame.add(ppick);
 	ppick.setBounds(100, 300, 300, 100);
 	ppick.setFont(new Font(null,Font.PLAIN,12));
 	frame.add(cpick);
 	cpick.setBounds(700, 300, 300, 100);
 	cpick.setFont(new Font(null,Font.PLAIN,12));
+	
+	frame.add(nameTag);
+	nameTag.setBounds(50,50,200,50);
+	nameTag.setFont(new Font(null,Font.PLAIN,12));
 	
 	frame.add(pscore);
 	pscore.setBounds(100, 400, 200, 100);
@@ -225,8 +238,13 @@ if(e.getSource()==back) {
 	PlayMusic.playButton();
 	
 	roundcount = 0;
+	
+	HighscoreSpecial.compareNormal();
+	HighscoreSpecial.saveScores();
 			SpecialSingleRules.cscore = 0;
 			SpecialSingleRules.pscore = 0;
+			
+			winSeries = 0;
 	
 			playagain.hide();
 			back.hide();
@@ -248,6 +266,15 @@ if(e.getSource()==back) {
 			GUI gui = new GUI();
 	
 			}
+
+if(e.getSource()==highscore) {
+	
+	PlayMusic.playButton();
+	
+	HighscoreSpecial.compareNormal();
+	HighscoreSpecial.saveScores();
+	HighscoreSpecial highscore = new HighscoreSpecial();
+}
 		
 		
 		
@@ -308,6 +335,8 @@ public void announceWinner() {
 			
 			printline.setText("Du hast das Spiel gewonnen");
 			
+			winSeries++;
+			
 			PlayMusic.playWin();
 			
 			button1.hide();
@@ -325,6 +354,8 @@ public void announceWinner() {
 			printline.setText("Du hast das Spiel verloren");
 			
 			PlayMusic.playLoose();
+			
+			winSeries = 0;
 			
 			button1.hide();
 			button2.hide();

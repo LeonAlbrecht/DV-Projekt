@@ -224,7 +224,7 @@ public class GUI implements ActionListener{
 			PlayMusic.playButton();
 			
 			frame.dispose();
-			Specialsingle npvc= new Specialsingle();
+			NameSPVC namespvc = new NameSPVC();
 		}
 		if(m1.getBackground().equals(Color.green) && duo.getBackground().equals(Color.green) && e.getSource()==Sbutton) {
 			

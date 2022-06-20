@@ -5,7 +5,10 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -29,6 +32,12 @@ public class Specialsingle implements ActionListener {
 	JButton button4 = new JButton("Lizard");
 	JButton button5 = new JButton("Shpock");
 	JButton highscore = new JButton("Highscores");
+	JLabel schere = new JLabel("Schere:");
+	JLabel stein = new JLabel("Stein:");
+	JLabel papier = new JLabel("Papier:");
+	JLabel echse = new JLabel("Echse:");
+	JLabel spock = new JLabel("Spock:");
+	
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
 	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus");
@@ -45,36 +54,58 @@ public class Specialsingle implements ActionListener {
 	
 	
 	Specialsingle(){
-		
+	
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/background2.png")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		 
+    frame.pack();		
 	frame.add(printline);
 	printline.setBounds(400, 100, 800, 20);
 	printline.setFont(new Font(null,Font.PLAIN,12));	
 	
 	frame.add(button1);
-	button1.setBounds(50,200,100,50);
+	button1.setBounds(50,200,150,100);
 	button1.addActionListener(this);
 	button1.setIcon(icon1);
-	icon1.setImage(icon1.getImage().getScaledInstance(110,80,Image.SCALE_DEFAULT));
+	icon1.setImage(icon1.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+	frame.add(schere);
+	schere.setBounds(100, 180, 50, 10);
+	
 	frame.add(button2);
-	button2.setBounds(200,200,100,50);
+	button2.setBounds(220,200,150,100);
 	button2.addActionListener(this);
 	button2.setIcon(icon2);
-	icon2.setImage(icon2.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
+	icon2.setImage(icon2.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+	frame.add(stein);
+	stein.setBounds(270, 180, 50, 10);
+	
 	frame.add(button3);
-	button3.setBounds(350,200,100,50);
+	button3.setBounds(390,200,150,100);
 	button3.addActionListener(this);
 	button3.setIcon(icon3);
-	icon3.setImage(icon3.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
+	icon3.setImage(icon3.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+	frame.add(papier);
+	papier.setBounds(440, 180, 50, 10);
+	
 	frame.add(button4);
-	button4.setBounds(500,200,100,50);
+	button4.setBounds(560,200,150,100);
 	button4.addActionListener(this);
 	button4.setIcon(icon4);
-	icon4.setImage(icon4.getImage().getScaledInstance(120,60,Image.SCALE_DEFAULT));
+	icon4.setImage(icon4.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+	frame.add(echse);
+	echse.setBounds(610, 180, 50, 10);
+	
 	frame.add(button5);
-	button5.setBounds(650,200,100,50);
+	button5.setBounds(730,200,150,100);
 	button5.addActionListener(this);
 	button5.setIcon(icon5);
-	icon5.setImage(icon5.getImage().getScaledInstance(110, 60, Image.SCALE_DEFAULT));
+	icon5.setImage(icon5.getImage().getScaledInstance(160, 120, Image.SCALE_DEFAULT));
+	frame.add(spock);
+	spock.setBounds(770, 180, 50, 10);
+	
 	
 	frame.add(highscore);
 	highscore.setBounds(700, 500, 100, 50);

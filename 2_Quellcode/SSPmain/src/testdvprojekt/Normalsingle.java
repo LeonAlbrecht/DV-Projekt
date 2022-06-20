@@ -1,6 +1,7 @@
 package testdvprojekt;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -30,6 +31,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
 	JButton highscore = new JButton("Highscores");
+	JLabel schere = new JLabel("Schere:");
+	JLabel stein = new JLabel("Stein:");
+	JLabel papier = new JLabel("Papier:");
 	JLabel pscore = new JLabel("Player Score: 0");
 	JLabel cscore = new JLabel("Computer Score: 0");
 	JLabel printline = new JLabel("Wählen Sie Schere, Stein oder Papier aus");
@@ -45,28 +49,43 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	
 	Normalsingle() {
 		
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/background2.png")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		 
 		
+        frame.pack();
 		frame.setLayout(null);
 		frame.setLocation(0, 0);
 		frame.add(printline);
 		printline.setBounds(400, 100, 800, 20);
-		printline.setFont(new Font(null,Font.PLAIN,12));
+		printline.setFont(new Font(null,Font.ITALIC,16));
 		
 		frame.add(button1);
-		button1.setBounds(100,200,100,50);
+		button1.setBounds(100,200,150,100);
 		button1.addActionListener(this);
 		button1.setIcon(icon1);
-		icon1.setImage(icon1.getImage().getScaledInstance(110,80,Image.SCALE_DEFAULT));
+		icon1.setImage(icon1.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+		frame.add(schere);
+		schere.setBounds(150, 180, 50, 10);
+		
 		frame.add(button2);
-		button2.setBounds(400,200,100,50);
+		button2.setBounds(400,200,150,100);
 		button2.addActionListener(this);
 		button2.setIcon(icon2);
-		icon2.setImage(icon2.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
+		icon2.setImage(icon2.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+		frame.add(stein);
+		stein.setBounds(450, 180, 50, 10);
+		
 		frame.add(button3);
-		button3.setBounds(700,200,100,50);
+		button3.setBounds(700,200,150,100);
 		button3.addActionListener(this);
 		button3.setIcon(icon3);
-		icon3.setImage(icon3.getImage().getScaledInstance(110,100,Image.SCALE_DEFAULT));
+		icon3.setImage(icon3.getImage().getScaledInstance(160,120,Image.SCALE_DEFAULT));
+		frame.add(papier);
+		papier.setBounds(750, 180, 50, 10);
 		
 		frame.add(highscore);
 		highscore.setBounds(700, 500, 100, 50);
@@ -74,21 +93,22 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		frame.add(ppick);
 		ppick.setBounds(100, 300, 300, 100);
-		ppick.setFont(new Font(null,Font.PLAIN,12));
+		ppick.setFont(new Font(null,Font.ITALIC,13));
 		frame.add(cpick);
 		cpick.setBounds(700, 300, 300, 100);
-		cpick.setFont(new Font(null,Font.PLAIN,12));
+		cpick.setFont(new Font(null,Font.ITALIC,13));
 		
 		frame.add(pscore);
 		pscore.setBounds(100, 400, 200, 50);
-		pscore.setFont(new Font(null,Font.PLAIN,12));
+		pscore.setFont(new Font(null,Font.ITALIC,13));
+		pscore.setForeground(Color.green);
 		frame.add(cscore);
 		cscore.setBounds(700, 400, 200, 50);
-		cscore.setFont(new Font(null,Font.PLAIN,12));
-		
+		cscore.setFont(new Font(null,Font.ITALIC,13));
+		cscore.setForeground(Color.red);
 		frame.add(nameTag);
 		nameTag.setBounds(50,50,200,50);
-		nameTag.setFont(new Font(null,Font.PLAIN,12));
+		nameTag.setFont(new Font(null,Font.ITALIC,13));
 		
 		frame.add(playagain);
 		playagain.setBounds(250, 500, 100, 50);
@@ -259,7 +279,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			
 			if(testmain2.pscore > testmain2.cscore) {
 				
-				printline.setText("Du hast das Spiel gewonnen");
+				printline.setText("Du hast das Spiel gewonnen !!!");
 				
 				PlayMusic.playWin();
 				

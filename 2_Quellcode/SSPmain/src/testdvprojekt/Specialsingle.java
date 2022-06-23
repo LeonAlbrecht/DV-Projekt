@@ -40,12 +40,13 @@ public class Specialsingle implements ActionListener {
 	
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
-	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus");
+	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus!");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
-	JButton playagain = new JButton("Play Again");
-	JButton back = new JButton("Back to title");
+	JButton playagain = new JButton("Erneut spielen");
+	JButton back = new JButton("zurüch zum Titel");
 	JLabel nameTag = new JLabel(name);
+	JLabel playername= new JLabel("Spieler:");
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
 	ImageIcon icon2 =new ImageIcon("pictures/bild2.jpg");
 	ImageIcon icon3 =new ImageIcon("pictures/bild3.jpg");
@@ -63,8 +64,8 @@ public class Specialsingle implements ActionListener {
 		 
     frame.pack();		
 	frame.add(printline);
-	printline.setBounds(400, 100, 800, 20);
-	printline.setFont(new Font(null,Font.PLAIN,12));	
+	printline.setBounds(450, 60, 800, 20);
+	printline.setFont(new Font(null,Font.PLAIN,16));	
 	
 	frame.add(button1);
 	button1.setBounds(50,200,150,100);
@@ -112,25 +113,28 @@ public class Specialsingle implements ActionListener {
 	highscore.addActionListener(this);
 	
 	frame.add(ppick);
-	ppick.setBounds(100, 300, 300, 100);
-	ppick.setFont(new Font(null,Font.PLAIN,12));
+	ppick.setBounds(100, 100, 300, 30);
+	ppick.setFont(new Font(null,Font.PLAIN,14));
 	frame.add(cpick);
-	cpick.setBounds(700, 300, 300, 100);
-	cpick.setFont(new Font(null,Font.PLAIN,12));
+	cpick.setBounds(700, 100, 300, 30);
+	cpick.setFont(new Font(null,Font.PLAIN,14));
 	
 	frame.add(nameTag);
-	nameTag.setBounds(50,50,200,50);
-	nameTag.setFont(new Font(null,Font.PLAIN,12));
+	nameTag.setBounds(90,40,200,20);
+	nameTag.setFont(new Font(null,Font.ITALIC,13));
+	frame.add(playername);
+	playername.setBounds(40,40,50,20);
+	playername.setFont(new Font(null,Font.ITALIC,13));
 	
 	frame.add(pscore);
-	pscore.setBounds(100, 400, 200, 100);
-	pscore.setFont(new Font(null,Font.PLAIN,12));
+	pscore.setBounds(100, 450, 200, 50);
+	pscore.setFont(new Font(null,Font.PLAIN,14));
 	frame.add(cscore);
-	cscore.setBounds(700, 400, 200, 100);
-	cscore.setFont(new Font(null,Font.PLAIN,12));
+	cscore.setBounds(700, 450, 200, 50);
+	cscore.setFont(new Font(null,Font.PLAIN,14));
 	
 	frame.add(playagain);
-	playagain.setBounds(250, 500, 100, 50);
+	playagain.setBounds(250, 500, 150, 50);
 	playagain.addActionListener(this);
 	playagain.hide();
 	frame.add(back);
@@ -254,6 +258,11 @@ if(e.getSource()==playagain) {
 			button3.show();
 			button4.show();
 			button5.show();
+			schere.show();
+			stein.show();
+			papier.show();
+			spock.show();
+			echse.show();
 			
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -285,6 +294,11 @@ if(e.getSource()==back) {
 			button3.show();
 			button4.show();
 			button5.show();
+			schere.show();
+			stein.show();
+			papier.show();
+			spock.show();
+			echse.show();
 	
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -375,6 +389,12 @@ public void announceWinner() {
 			button3.hide();
 			button4.hide();
 			button5.hide();
+			schere.hide();
+			stein.hide();
+			papier.hide();
+			spock.hide();
+			echse.hide();
+			
 			
 			playagain.show();
 			back.show();
@@ -393,6 +413,11 @@ public void announceWinner() {
 			button3.hide();
 			button4.hide();
 			button5.hide();
+			schere.hide();
+			stein.hide();
+			papier.hide();
+			spock.hide();
+			echse.hide();
 			
 			playagain.show();
 			back.show();
@@ -411,6 +436,11 @@ public void announceWinner() {
 			button3.hide();
 			button4.hide();
 			button5.hide();
+			schere.hide();
+			stein.hide();
+			papier.hide();
+			spock.hide();
+			echse.hide();
 			
 			playagain.show();
 			back.show();

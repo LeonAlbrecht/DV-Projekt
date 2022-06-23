@@ -32,7 +32,7 @@ public class Highscore implements ActionListener {
 	
 	
 	JFrame frame = new JFrame();
-	JButton back = new JButton("back");
+	JButton back = new JButton("zurück");
 	JLabel highscoreTitel =new JLabel("Highscoreliste:");
 	JLabel highscore1 = new JLabel();
 	JLabel highscore2 = new JLabel();

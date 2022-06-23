@@ -31,17 +31,18 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
 	JButton highscore = new JButton("Highscores");
+	JLabel playername=new JLabel("Spieler:");
 	JLabel schere = new JLabel("Schere:");
 	JLabel stein = new JLabel("Stein:");
 	JLabel papier = new JLabel("Papier:");
-	JLabel pscore = new JLabel("Player Score: 0");
+	JLabel pscore = new JLabel("Spieler Score: 0");
 	JLabel cscore = new JLabel("Computer Score: 0");
 	JLabel printline = new JLabel("Wählen Sie Schere, Stein oder Papier aus");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel(); 
 	JLabel nameTag = new JLabel(name);
-	JButton playagain = new JButton("Play Again");
-	JButton back = new JButton("Back to Title");
+	JButton playagain = new JButton("Erneut spielen");
+	JButton back = new JButton("zurück zum Titel");
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
 	ImageIcon icon2 =new ImageIcon("pictures/bild2.jpg");
 	ImageIcon icon3 =new ImageIcon("pictures/bild3.jpg");
@@ -60,7 +61,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.setLayout(null);
 		frame.setLocation(0, 0);
 		frame.add(printline);
-		printline.setBounds(400, 100, 800, 20);
+		printline.setBounds(450, 60, 800, 20);
 		printline.setFont(new Font(null,Font.ITALIC,16));
 		
 		frame.add(button1);
@@ -92,26 +93,27 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		highscore.addActionListener(this);
 		
 		frame.add(ppick);
-		ppick.setBounds(100, 300, 300, 100);
-		ppick.setFont(new Font(null,Font.ITALIC,13));
+		ppick.setBounds(100, 100, 300, 30);
+		ppick.setFont(new Font(null,Font.ITALIC,14));
 		frame.add(cpick);
-		cpick.setBounds(700, 300, 300, 100);
-		cpick.setFont(new Font(null,Font.ITALIC,13));
+		cpick.setBounds(700, 100, 300, 30);
+		cpick.setFont(new Font(null,Font.ITALIC,14));
 		
 		frame.add(pscore);
-		pscore.setBounds(100, 400, 200, 50);
-		pscore.setFont(new Font(null,Font.ITALIC,13));
-		pscore.setForeground(Color.green);
+		pscore.setBounds(100, 450, 200, 50);
+		pscore.setFont(new Font(null,Font.ITALIC,14));
 		frame.add(cscore);
-		cscore.setBounds(700, 400, 200, 50);
-		cscore.setFont(new Font(null,Font.ITALIC,13));
-		cscore.setForeground(Color.red);
+		cscore.setBounds(700, 450, 200, 50);
+		cscore.setFont(new Font(null,Font.ITALIC,14));
 		frame.add(nameTag);
-		nameTag.setBounds(50,50,200,50);
+		nameTag.setBounds(90,40,200,20);
 		nameTag.setFont(new Font(null,Font.ITALIC,13));
+		frame.add(playername);
+		playername.setBounds(40,40,50,20);
+		playername.setFont(new Font(null,Font.ITALIC,13));
 		
 		frame.add(playagain);
-		playagain.setBounds(250, 500, 100, 50);
+		playagain.setBounds(250, 500, 150, 50);
 		playagain.addActionListener(this);
 		playagain.hide();
 		frame.add(back);
@@ -199,6 +201,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			button1.show();
 			button2.show();
 			button3.show();
+			schere.show();
+			stein.show();
+			papier.show();
 			
 			pscore.setText("Player Score: " + testmain2.pscore);
 			 cscore.setText("Computer Score: " + testmain2.cscore);
@@ -226,6 +231,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			button1.show();
 			button2.show();
 			button3.show();
+			schere.show();
+			stein.show();
+			papier.show();
 			
 			pscore.setText("Player Score: " + testmain2.pscore);
 			 cscore.setText("Computer Score: " + testmain2.cscore);
@@ -288,6 +296,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				button1.hide();
 				button2.hide();
 				button3.hide();
+				schere.hide();
+				stein.hide();
+				papier.hide();
 				
 				playagain.show();
 				back.show();
@@ -305,6 +316,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				button1.hide();
 				button2.hide();
 				button3.hide();
+				schere.hide();
+				stein.hide();
+				papier.hide();
 				
 				playagain.show();
 				back.show();
@@ -321,6 +335,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				button1.hide();
 				button2.hide();
 				button3.hide();
+				schere.hide();
+				stein.hide();
+				papier.hide();
 				
 				playagain.show();
 				back.show();

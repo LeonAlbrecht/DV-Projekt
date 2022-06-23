@@ -55,21 +55,40 @@ public class GUI implements ActionListener{
 		panel= new JPanel();
 		frame= new JFrame();
 		title= new JLabel("Willkommen zu Schere, Stein, Papier");
+		title.setForeground(Color.white);
 		sbutton=new JButton("Start");
 		Sbutton= new JButton("Start");
 		
 		rTextfeld= new JLabel("Anzahl der Runden: ");
+		rTextfeld.setForeground(Color.white);
 		r3= new JButton("Best of 3");
 		r5= new JButton("Best of 5");
 		r7= new JButton("Best of 7");
+		r3.setForeground(Color.white);
+		r3.setBackground(Color.gray);
+		r5.setForeground(Color.white);
+		r5.setBackground(Color.gray);
+		r7.setForeground(Color.white);
+		r7.setBackground(Color.gray);
 		
 		mTextfeld= new JLabel("Modus: ");
+		mTextfeld.setForeground(Color.white);
 		m1= new JButton("1.: Normaler Modus");
 		m2= new JButton("2.: Mit Spock und Echse");
+		m1.setForeground(Color.white);
+		m1.setBackground(Color.gray);
+		m2.setForeground(Color.white);
+		m2.setBackground(Color.gray);
 		
 		playerTextfeld= new JLabel("Anzahl der Spieler: ");
+		playerTextfeld.setForeground(Color.white);
 		single= new JButton("Spiel gegen Computer");
+		single.setForeground(Color.white);
+		single.setBackground(Color.gray);
 		duo= new JButton("2 Spieler");
+		duo.setForeground(Color.white);
+		duo.setBackground(Color.gray);
+		
 		
 		P1Textfeld= new JLabel("Name Spieler 1: ");
 		P2Textfeld= new JLabel("Name Spieler 2: ");
@@ -92,8 +111,9 @@ public class GUI implements ActionListener{
 		//Men�-Panel
 		panel.setLayout(null);									//kein Layout
 		panel.add(title);										//Titel hinzuf�gen
-		title.setBounds(500, 10, 500, 30);						//Titel Positionieren
+		title.setBounds(500, 60, 500, 20);						//Titel Positionieren
 		panel.add(sbutton);										//button hinzuf�gen
+		panel.setBackground(Color.BLACK);
 		sbutton.setBounds(560, 150, 80, 25);					//button positionieren
 		sbutton.addActionListener(this);
 		Sbutton.addActionListener(this); 						//Interaktionsfunktion button

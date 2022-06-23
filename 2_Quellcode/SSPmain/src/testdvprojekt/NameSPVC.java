@@ -3,7 +3,11 @@ package testdvprojekt;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,16 +28,23 @@ public class NameSPVC implements ActionListener{
 		frame.setLayout(null);
 		frame.setLocation(0,0);
 		
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/background2.png")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+		
 		frame.add(name);
-		name.setBounds(500, 300, 300, 50);
+		name.setBounds(420, 500, 300, 50);
 		name.setFont(new Font(null,Font.PLAIN,12));
 		
 		frame.add(label);
-		label.setBounds(600, 200, 300, 100);
-		label.setFont(new Font(null,Font.PLAIN,12));
+		label.setBounds(550, 200, 300, 20);
+		label.setFont(new Font(null,Font.PLAIN,16));
 		
 		frame.add(button);
-		button.setBounds(800, 300, 100, 50);
+		button.setBounds(720, 500, 100, 50);
 		button.addActionListener(this);
 		
 		

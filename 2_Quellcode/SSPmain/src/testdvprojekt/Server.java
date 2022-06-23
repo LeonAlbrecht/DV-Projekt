@@ -1,52 +1,71 @@
 package testdvprojekt;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Server {
+	
+	
+	
+	private int port;
+	
+	public Server(int port) {
+		
+		this.port = port;
+		
+	}
+	
 
-    public static ServerSocket serverSocket;
+	
+	public void startServer() {
+		
+		new Thread(new Runnable() {
+			
 
-    public Server(ServerSocket serverSocket) {
-        this.serverSocket = serverSocket;
-    }
-
-    public void startServer() {
-        try {
-            // Listen for connections (clients to connect) on port 1234.
-            while (!serverSocket.isClosed()) {
-                // Will be closed in the Client Handler.
-                Socket socket = serverSocket.accept();
-                System.out.println("A new client has connected!");
-                ClientHandler clientHandler = new ClientHandler(socket);
-                Thread thread = new Thread(clientHandler);
-                // The start method begins the execution of a thread.
-                // When you call start() the run method is called.
-                // The operating system schedules the threads.
-                thread.start();
-            }
-        } catch (IOException e) {
-            closeServerSocket();
-        }
-    }
-
-    // Close the server socket gracefully.
-    public void closeServerSocket() {
-        try {
-            if (serverSocket != null) {
-                serverSocket.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Run the program.
-    public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(1234);
-        Server server = new Server(serverSocket);
-        server.startServer();
-    }
+			@Override
+			public void run() {
+				
+				System.out.println("Server starten...");
+				
+				while(true) {
+					
+					try {
+						
+						ServerSocket serverSocket = new ServerSocket(port);
+						System.out.println("Warten auf Verbindung...");
+						Socket remoteClientSocket = serverSocket.accept();
+						System.out.println("Server mit Client: " + remoteClientSocket.getRemoteSocketAddress() + " verbunden.");
+						
+						Scanner s = new Scanner(new BufferedReader(new InputStreamReader(remoteClientSocket.getInputStream())));
+						if(s.hasNextLine()) {
+							
+							if(s.hasNextLine()) {
+								
+								
+							}
+							
+						}
+						
+						s.close();
+						remoteClientSocket.close();
+						serverSocket.close();
+						
+						
+					} catch (Exception e){
+						
+						e.printStackTrace();
+						
+						
+					}
+				}
+				
+			}
+			
+			
+		}).start();
+	}
 
 }

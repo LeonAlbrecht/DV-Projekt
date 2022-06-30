@@ -23,155 +23,153 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.RootPaneContainer;
 
+
+//Beispiel JavaDoc:
+
+/**
+ * kurze Beschreibung:
+ * 
+ * @author: (der jeweilige Autor)
+ * @param:  (die Parameter der Klasse/Methode)
+ * @return: (Rückgabewerte der Klasse/Methde)
+ */
+
+
 public class GUI implements ActionListener{
 	
 	public static int winscore;
 	
-	JFrame frame;
-	JLabel title;												//Titel des Rahmens
-	JPanel panel;				
-	JButton sbutton;											//Startbutton
-	JButton Sbutton;											//neuer Startbutton nach Einstellungen...
+	JFrame frame=new JFrame();
+	JLabel title= new JLabel("Willkommen zu Schere, Stein, Papier");											
+	JButton sbutton=new JButton("Start");											
+	JButton Sbutton= new JButton("Start");											
 	
-	JLabel rTextfeld;
-	JLabel P1Textfeld;
-	JLabel P2Textfeld;
-	JLabel mTextfeld;
-	JLabel playerTextfeld;
-	JButton m1;
-	JButton m2;
-	JButton single;
-	JButton duo;
-	JButton r3;
-	JButton r5;
-	JButton r7;
-	JTextField P1Eingabefeld;
-	JTextField P2Eingabefeld;
-	JButton test;
-	
+	JLabel rTextfeld= new JLabel("Anzahl der Runden: ");
+	JLabel P1Textfeld= new JLabel("Name Spieler 1: ");
+	JLabel P2Textfeld= new JLabel("Name Spieler 2: ");
+	JLabel mTextfeld= new JLabel("Modus: ");
+	JLabel playerTextfeld= new JLabel("Anzahl der Spieler: ");
+	JButton m1= new JButton("1.: Normaler Modus");
+	JButton m2= new JButton("2.: Mit Spock und Echse");
+	JButton single= new JButton("Spiel gegen Computer");
+	JButton duo= new JButton("2 Spieler");
+	JButton r3= new JButton("Best of 3");
+	JButton r5= new JButton("Best of 5");
+	JButton r7= new JButton("Best of 7");
+	JTextField P1Eingabefeld= new JTextField(20);
+	JTextField P2Eingabefeld= new JTextField(20);
+	JButton test= new JButton("test");
 	
 	
 	public GUI() {
-		panel= new JPanel();
-		frame= new JFrame();
-		title= new JLabel("Willkommen zu Schere, Stein, Papier");
-		title.setForeground(Color.white);
-		sbutton=new JButton("Start");
-		Sbutton= new JButton("Start");
 		
-		rTextfeld= new JLabel("Anzahl der Runden: ");
-		rTextfeld.setForeground(Color.white);
-		r3= new JButton("Best of 3");
-		r5= new JButton("Best of 5");
-		r7= new JButton("Best of 7");
-		r3.setForeground(Color.white);
-		r3.setBackground(Color.gray);
-		r5.setForeground(Color.white);
-		r5.setBackground(Color.gray);
-		r7.setForeground(Color.white);
-		r7.setBackground(Color.gray);
-		
-		mTextfeld= new JLabel("Modus: ");
-		mTextfeld.setForeground(Color.white);
-		m1= new JButton("1.: Normaler Modus");
-		m2= new JButton("2.: Mit Spock und Echse");
-		m1.setForeground(Color.white);
-		m1.setBackground(Color.gray);
-		m2.setForeground(Color.white);
-		m2.setBackground(Color.gray);
-		
-		playerTextfeld= new JLabel("Anzahl der Spieler: ");
-		playerTextfeld.setForeground(Color.white);
-		single= new JButton("Spiel gegen Computer");
-		single.setForeground(Color.white);
-		single.setBackground(Color.gray);
-		duo= new JButton("2 Spieler");
-		duo.setForeground(Color.white);
-		duo.setBackground(Color.gray);
-		
-		
-		P1Textfeld= new JLabel("Name Spieler 1: ");
-		P2Textfeld= new JLabel("Name Spieler 2: ");
-		P1Eingabefeld= new JTextField(20);
-		P2Eingabefeld= new JTextField(20);
-		test= new JButton("test");
-		
-		
-		
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/background2.png")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		
         frame.pack();
-        frame.setVisible(true);
+        frame.setLayout(null);
+		frame.setLocation(0, 0);														
+															
+		frame.add(title);
+		title.setBounds(500, 60, 500, 20);						
+		frame.add(sbutton);										
+		sbutton.setBounds(560, 150, 80, 25);
+		sbutton.addActionListener(this);
+		
+		frame.add(Sbutton);
+		Sbutton.setBounds(590, 500, 80, 25);	
+		Sbutton.addActionListener(this);
+		Sbutton.hide();
+		
+		
+		frame.add(rTextfeld);
+		rTextfeld.setBounds(340, 90, 150, 20);	
+		rTextfeld.hide();
+		
+		frame.add(r3);
+		r3.setBounds(460, 90, 120, 30);
+		r3.addActionListener(this);
+		r3.hide();
+		
+		frame.add(r5);
+		r5.setBounds(595, 90, 120, 30);
+		r5.addActionListener(this);
+		r5.hide();
+		
+		frame.add(r7);
+		r7.setBounds(730, 90, 120, 30);
+		r7.addActionListener(this);
+		r7.hide();
+		
+		frame.add(mTextfeld);									//Textfeld Modus
+		mTextfeld.setBounds(340, 130, 150, 20);
+		
+		mTextfeld.hide();
+		frame.add(m1);											//Button Modus 1
+		m1.setBounds(460, 125, 200, 30);
+		m1.addActionListener(this);
+		m1.hide();
+		
+		frame.add(m2);											//Button Modus 2
+		m2.setBounds(650, 125, 200, 30);
+		m2.addActionListener(this);
+		m2.hide();
+		
+		frame.add(playerTextfeld);								//Textfeld Spieleranzahl
+		playerTextfeld.setBounds(340, 170, 150, 20);
+		playerTextfeld.hide();
+	
+		frame.add(single);
+		single.setBounds(460, 165, 200, 30);
+		single.addActionListener(this);
+		single.hide();
+		
+		frame.add(duo);	
+		duo.setBounds(650, 165, 200, 30);
+		duo.addActionListener(this);
+		duo.hide();
+		
+		frame.add(P1Textfeld);									
+		frame.add(P2Textfeld);									
+		frame.add(P1Eingabefeld);
+		frame.add(P2Eingabefeld);
+		
+		
+		
+		
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieï¿½en wird Programm geschlossen
-		frame.add(panel);					
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieï¿½en wird Programm geschlossen					
 		frame.setSize(1500, 700);								//grï¿½ï¿½e des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);									//Rahmen wird angezeig
-
-		//Menï¿½-Panel
-		panel.setLayout(null);									//kein Layout
-		panel.add(title);										//Titel hinzufï¿½gen
-		title.setBounds(500, 60, 500, 20);						//Titel Positionieren
-		panel.add(sbutton);										//button hinzufï¿½gen
-		panel.setBackground(Color.BLACK);
-		sbutton.setBounds(560, 150, 80, 25);					//button positionieren
-		sbutton.addActionListener(this);
-		Sbutton.addActionListener(this); 						//Interaktionsfunktion button
-		r3.addActionListener(this);
-		r5.addActionListener(this);
-		r7.addActionListener(this);
-		m1.addActionListener(this);
-		m2.addActionListener(this);
-		single.addActionListener(this);
-		duo.addActionListener(this);
-		
 	}
 	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		title.setText("Wï¿½hlen Sie Ihre Einstellungen aus");		//Reaktion nach ausfï¿½hren des Buttons
+		
+		if(e.getSource()==sbutton) {
+			
 		sbutton.hide();
-		panel.add(Sbutton);
-		Sbutton.setBounds(560, 300, 80, 25);					//Neuer Startbutton Positionieren
+		title.setText("Wï¿½hlen Sie Ihre Einstellungen aus");
+		Sbutton.show();
+		rTextfeld.show();
+		r3.show();
+		r5.show();
+		r7.show();
+		mTextfeld.show();
+		m1.show();
+		m2.show();
+		playerTextfeld.show();
+		single.show();
+		duo.show();
+		}
 		
-		panel.add(rTextfeld);									//Anzahl der Runden (Textfeld/Eingabefeld) 
-		panel.add(r3);
-		panel.add(r5);
-		panel.add(r7);
-	
-		panel.add(mTextfeld);									//Textfeld Modus
-		panel.add(m1);											//Button Modus 1
-		panel.add(m2);											//Button Modus 2
-	
-		panel.add(playerTextfeld);								//Textfeld Spieleranzahl
-		panel.add(single);										//Button Singelmudos
-		panel.add(duo);											//Button 2 Spieler
-	
-		panel.add(P1Textfeld);									//Textfeld Player 1
-		panel.add(P2Textfeld);									//Textfeld Player 2
-		panel.add(P1Eingabefeld);
-		panel.add(P2Eingabefeld);
-	
-	
-	
-		rTextfeld.setBounds(340, 90, 150, 20);					//Positionierungen
-		r3.setBounds(460, 90, 120, 30);
-		r5.setBounds(595, 90, 120, 30);
-		r7.setBounds(730, 90, 120, 30);
-	
-		mTextfeld.setBounds(340, 130, 150, 20);
-		m1.setBounds(460, 125, 200, 30);
-		m2.setBounds(650, 125, 200, 30);
-	
-		playerTextfeld.setBounds(340, 170, 150, 20);
-		single.setBounds(460, 165, 200, 30);
-		duo.setBounds(650, 165, 200, 30);
+							
 		
-		
-		
-		
-		 
 			
 		if(e.getSource()==r3) {
 			
@@ -298,8 +296,7 @@ public class GUI implements ActionListener{
 	}
 	
 		
-		 
-
+	
 	public static void main(String[] args) {
 		new GUI(); {
 		}

@@ -26,7 +26,6 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	public static String name;
 	
 	JFrame frame = new JFrame();
-	JPanel panel1 = new JPanel(); 
 	JButton button1 = new JButton("Schere");
 	JButton button2 = new JButton("Stein");
 	JButton button3 = new JButton("Papier");
@@ -127,8 +126,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		
 		
 		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schließen wird Programm geschlossen
-		frame.add(panel1, BorderLayout.CENTER);					
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schließen wird Programm geschlossen					
 		frame.setSize(1500, 700);								//größe des Rahmens
 		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
 		frame.setVisible(true);	

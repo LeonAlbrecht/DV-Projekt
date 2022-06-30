@@ -18,7 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus gegen Computer
+public class Normalsingle implements ActionListener{			//class: mode for normal-single 
 	
 	public static int a;
 	public static int roundcount;
@@ -49,7 +49,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 	
 	Normalsingle() {
 		
-		try {
+		try {																											//background
             frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/background2.png")))));
         } catch (IOException e) {
             e.printStackTrace();
@@ -63,7 +63,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		printline.setBounds(450, 60, 800, 20);
 		printline.setFont(new Font(null,Font.ITALIC,16));
 		
-		frame.add(button1);
+		frame.add(button1);																		//button scissor
 		button1.setBounds(100,200,150,100);
 		button1.addActionListener(this);
 		button1.setIcon(icon1);
@@ -71,7 +71,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.add(schere);
 		schere.setBounds(150, 180, 50, 10);
 		
-		frame.add(button2);
+		frame.add(button2);																		//button stone
 		button2.setBounds(400,200,150,100);
 		button2.addActionListener(this);
 		button2.setIcon(icon2);
@@ -79,7 +79,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.add(stein);
 		stein.setBounds(450, 180, 50, 10);
 		
-		frame.add(button3);
+		frame.add(button3);																		//button paper
 		button3.setBounds(700,200,150,100);
 		button3.addActionListener(this);
 		button3.setIcon(icon3);
@@ -87,48 +87,45 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		frame.add(papier);
 		papier.setBounds(750, 180, 50, 10);
 		
-		frame.add(highscore);
+		frame.add(highscore);																	//button high score
 		highscore.setBounds(700, 500, 100, 50);
 		highscore.addActionListener(this);
 		
-		frame.add(ppick);
+		frame.add(ppick);																		//label of your decision
 		ppick.setBounds(100, 100, 300, 30);
 		ppick.setFont(new Font(null,Font.ITALIC,14));
-		frame.add(cpick);
+		frame.add(cpick);																		//label of computer decision
 		cpick.setBounds(700, 100, 300, 30);
 		cpick.setFont(new Font(null,Font.ITALIC,14));
 		
-		frame.add(pscore);
+		frame.add(pscore);																		//player score
 		pscore.setBounds(100, 450, 200, 50);
 		pscore.setFont(new Font(null,Font.ITALIC,14));
-		frame.add(cscore);
+		frame.add(cscore);																		//computer score
 		cscore.setBounds(700, 450, 200, 50);
 		cscore.setFont(new Font(null,Font.ITALIC,14));
-		frame.add(nameTag);
+		frame.add(nameTag);																		//entered name
 		nameTag.setBounds(90,40,200,20);
 		nameTag.setFont(new Font(null,Font.ITALIC,13));
-		frame.add(playername);
+		frame.add(playername);																	
 		playername.setBounds(40,40,50,20);
 		playername.setFont(new Font(null,Font.ITALIC,13));
 		
-		frame.add(playagain);
+		frame.add(playagain);																	//button play again
 		playagain.setBounds(250, 500, 150, 50);
 		playagain.addActionListener(this);
 		playagain.hide();
-		frame.add(back);
+		frame.add(back);																		//button back to settings
 		back.setBounds(450, 500, 150, 50);
 		back.addActionListener(this);
 		back.hide();
 		
 		
 		
-		
-		
-		
-		frame.setLocation(0, 0);								//Pos wo der Rahmen angezeigt wird (in der Mitte)
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	//bei schlieÃŸen wird Programm geschlossen					
-		frame.setSize(1500, 700);								//grÃ¶ÃŸe des Rahmens
-		frame.setTitle("Schere Stein Papier");					//Titel im Rahmen
+		frame.setLocation(0, 0);								
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);						
+		frame.setSize(1500, 700);								
+		frame.setTitle("Schere Stein Papier");					
 		frame.setVisible(true);	
 		
 
@@ -142,15 +139,15 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			
 			PlayMusic.playButton();
 			
-			 a = 1;
-			 ppick.setText("Sie haben Schere ausgewählt");
-			 testmain2.compare();
-			 showPicks();
-			 pscore.setText("Player Score: " + testmain2.pscore);
-			 cscore.setText("Computer Score: " + testmain2.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
+			a = 1;
+			ppick.setText("Sie haben Schere ausgewählt");
+			testmain2.compare();
+			showPicks();
+			pscore.setText("Player Score: " + testmain2.pscore);
+			cscore.setText("Computer Score: " + testmain2.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 		}
 		
 		if(e.getSource()==button2) {
@@ -162,11 +159,10 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
-			 cscore.setText("Computer Score: " + testmain2.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
-			
+			cscore.setText("Computer Score: " + testmain2.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 		}
 		
 		if(e.getSource()==button3) {
@@ -178,11 +174,10 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			testmain2.compare();
 			showPicks();
 			pscore.setText("Player Score: " + testmain2.pscore);
-			 cscore.setText("Computer Score: " + testmain2.cscore);
-			 printing();
-			 roundcount++;
-			 announceWinner();
-			
+			cscore.setText("Computer Score: " + testmain2.cscore);
+			printing();
+			roundcount++;
+			announceWinner();
 		}
 		
 		if(e.getSource()==playagain) {
@@ -204,12 +199,11 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			papier.show();
 			
 			pscore.setText("Player Score: " + testmain2.pscore);
-			 cscore.setText("Computer Score: " + testmain2.cscore);
+			cscore.setText("Computer Score: " + testmain2.cscore);
 			 
-			 printline.setText("");
-			 ppick.setText("");
-			 cpick.setText("");
-			
+			printline.setText("");
+			ppick.setText("");
+			cpick.setText("");
 		}
 		
 		if(e.getSource()==back) {
@@ -234,17 +228,16 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			papier.show();
 			
 			pscore.setText("Player Score: " + testmain2.pscore);
-			 cscore.setText("Computer Score: " + testmain2.cscore);
+			cscore.setText("Computer Score: " + testmain2.cscore);
 			 
-			 printline.setText("");
-			 ppick.setText("");
-			 cpick.setText("");
+			printline.setText("");
+			ppick.setText("");
+			cpick.setText("");
 			 
-			 winSeries = 0;
+			winSeries = 0;
 			 
-			 frame.dispose();
-			 GUI gui = new GUI();
-			
+			frame.dispose();
+			GUI gui = new GUI();
 		}
 		
 		if(e.getSource()==highscore) {
@@ -255,7 +248,7 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			Highscore.saveScores();
 			Highscore highscore = new Highscore();
 		}
-		
+
 	}
 	
 	public void printing() {
@@ -263,19 +256,16 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 		if(testmain2.printer == 0) {
 			
 			printline.setText("Unentschieden");
-			
 		}
 		
 		if(testmain2.printer == 1) {
 			
 			printline.setText("Du hast gewonnen :)");
-			
 		}
 		
 		if(testmain2.printer == 2) {
 			
 			printline.setText("Du hast verloren :c");
-			
 		}
 	}
 	
@@ -299,9 +289,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				papier.hide();
 				
 				playagain.show();
-				back.show();
-				
+				back.show();	
 			}
+			
 			if(testmain2.cscore > testmain2.pscore) {
 				
 				printline.setText("Du hast das Spiel verloren");
@@ -319,11 +309,9 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				papier.hide();
 				
 				playagain.show();
-				back.show();
-				
-				
-				
+				back.show();	
 			}
+			
 			if(testmain2.cscore == testmain2.pscore) {
 				
 				PlayMusic.playDraw();
@@ -339,14 +327,8 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 				
 				playagain.show();
 				back.show();
-				
-				
 			}
-			
-			
-			
-			
-			
+				
 		}
 	}
 	
@@ -357,15 +339,16 @@ public class Normalsingle implements ActionListener{			//Klasse: Normaler Modus 
 			cpick.setText("Der Computer hat Schere ausgewählt");
 		}
 		
-if(testmain2.cpick == 2) {
+		if(testmain2.cpick == 2) {
 			
 			cpick.setText("Der Computer hat Stein ausgewählt");
 		}
 
-if(testmain2.cpick == 3) {
+		if(testmain2.cpick == 3) {
 	
-	cpick.setText("Der Computer hat Papier ausgewählt");
-}
+			cpick.setText("Der Computer hat Papier ausgewählt");
+		}
 		
 	}
+	
 }

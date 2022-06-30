@@ -20,6 +20,10 @@ public class Normalduo implements ActionListener {
 	public static String name;
 	public static int client1Pick;
 	public static int client2Pick;
+	public static int winCondition;
+	public static int player1Score;
+	public static int player2Score;
+	public static int roundcount;
 	
 	JFrame frame = new JFrame();
 	JButton create = new JButton("Create Room");
@@ -30,6 +34,9 @@ public class Normalduo implements ActionListener {
 	JButton client2Schere = new JButton("Schere");
 	JButton client2Stein = new JButton("Stein");
 	JButton client2Papier = new JButton("Papier");
+	JButton playAgain = new JButton("Play again");
+	JButton back = new JButton("Back to title");
+	static JLabel announceWin = new JLabel();
 	
 	public Normalduo() {
 		
@@ -138,9 +145,69 @@ public class Normalduo implements ActionListener {
 			Client1.sendPick();
 		}
 		
-		
+		if(e.getSource()==client2Schere) {
+			
+			client2Pick = 1;
+			Client2.sendPick();
 		}
 		
+		if(e.getSource()==client2Stein) {
+			
+			client2Pick = 2;
+			Client2.sendPick();
+		}
+		
+		if(e.getSource()==client2Papier) {
+			
+			client2Pick = 3;
+			Client2.sendPick();
+		}
+		
+		
+		
+		}
+	
+	public static void announceWinner() {
+		
+		if(winCondition==0) {
+			
+        announceWin.setText("Unentschieden");
+
+		}
+		
+		if(winCondition==1) {
+			
+			announceWin.setText("Spieler 1 gewinnt");
+			player1Score++;
+			
+		}
+		
+		if(winCondition==2) {
+			
+			announceWin.setText("Spieler 2 gewinnt");
+			player2Score++; 
+		}
+	}
+		
+	public static void endGame() {
+		
+		if(GUI.winscore == roundcount || player1Score*2 > GUI.winscore || player2Score*2 > GUI.winscore) {
+			
+			if(player1Score > player2Score) {
+				
+				announceWin.setText("Spieler 1 gewinnt das Spiel!");
+				
+				
+			}
+			
+			if(player2Score > player1Score) {
+				
+				announceWin.setText("Spieler 2 gewinnt das Spiel!");
+				
+			}
+			
+		}
+	}
 		
 	}
 	

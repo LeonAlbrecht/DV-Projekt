@@ -5,9 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -43,6 +46,12 @@ public class Highscore implements ActionListener {
  * Frame Anpassungen(Größe, 
  */
 	public Highscore() {
+		
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/highscorebild.jpg")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 		
 		frame.setLayout(null);
 		

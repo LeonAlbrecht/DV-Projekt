@@ -25,7 +25,7 @@ public class PlayMusic {
 public static void play() {
 
   try {
-   File file = new File("Sounds/Steve Jablonsky - Arrival To Earth (Official Audio) (1).wav");
+   File file = new File("Sounds/Nicht Minecraft.wav");
    Clip clip = AudioSystem.getClip();
    clip.open(AudioSystem.getAudioInputStream(file));
    clip.start();

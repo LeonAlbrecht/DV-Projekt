@@ -5,9 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -47,14 +50,21 @@ public class HighscoreSpecial implements ActionListener {
 	JLabel highscore4 = new JLabel();
 	JLabel highscore5 = new JLabel();
 
-	public HighscoreSpecial() {
-		
-		/**
+	/**
 		 * Kurze Beschreibung: Frame Anpassungen
 		 * 
 		 * @author Jonas, Adham
 		 *
 		 */
+	public HighscoreSpecial() {
+		
+		
+		try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("pictures/highscorebild.jpg")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
 		
 		frame.setLayout(null);
 		
@@ -87,7 +97,6 @@ public class HighscoreSpecial implements ActionListener {
 		frame.setLocation(0,0);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Highscore List");
-		frame.getContentPane().setBackground(Color.cyan);
 		
 	}
 

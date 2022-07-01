@@ -44,11 +44,11 @@ public class Specialsingle implements ActionListener {
 	JLabel spock = new JLabel("Spock:");
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
-	JLabel printline = new JLabel("Wï¿½hlen Sie eine Mï¿½glichkeit aus!");
+	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus!");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Erneut spielen");
-	JButton back = new JButton("zurï¿½ch zum Titel");
+	JButton back = new JButton("zurüch zum Titel");
 	JLabel nameTag = new JLabel(name);
 	JLabel playername= new JLabel("Spieler:");
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
@@ -173,7 +173,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 1;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Schere ausgewï¿½hlt");
+			ppick.setText("Sie haben Schere ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -188,7 +188,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 2;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Stein ausgewï¿½hlt");
+			ppick.setText("Sie haben Stein ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -203,7 +203,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 3;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Papier ausgewï¿½hlt");
+			ppick.setText("Sie haben Papier ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -218,7 +218,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 4;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Lizard ausgewï¿½hlt");
+			ppick.setText("Sie haben Lizard ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -233,7 +233,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 5;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Shpock ausgewï¿½hlt");
+			ppick.setText("Sie haben Shpock ausgewählt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -267,7 +267,7 @@ public class Specialsingle implements ActionListener {
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			 
-			printline.setText("Wï¿½hlen Sie eine Mï¿½glichkeit aus");
+			printline.setText("Wählen Sie eine Möglichkeit aus");
 			ppick.setText("");
 			cpick.setText("");
 		}
@@ -358,27 +358,27 @@ public void showPicks() {
 	
 		if(SpecialSingleRules.cpick == 1) {
 		
-			cpick.setText("Der Computer hat Schere ausgewï¿½hlt");
+			cpick.setText("Der Computer hat Schere ausgewählt");
 		}
 	
 		if(SpecialSingleRules.cpick == 2) {
 		
-			cpick.setText("Der Computer hat Stein ausgewï¿½hlt");
+			cpick.setText("Der Computer hat Stein ausgewählt");
 		}
 
 		if(SpecialSingleRules.cpick == 3) {
 
-			cpick.setText("Der Computer hat Papier ausgewï¿½hlt");
+			cpick.setText("Der Computer hat Papier ausgewählt");
 		}
 		
 		if(SpecialSingleRules.cpick == 4) {
 
-			cpick.setText("Der Computer hat Lizard ausgewï¿½hlt");
+			cpick.setText("Der Computer hat Lizard ausgewählt");
 		}
 		
 		if(SpecialSingleRules.cpick == 5) {
 
-			cpick.setText("Der Computer hat Shpock ausgewï¿½hlt");
+			cpick.setText("Der Computer hat Shpock ausgewählt");
 		}
 	
 }

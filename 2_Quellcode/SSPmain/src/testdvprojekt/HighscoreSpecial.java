@@ -11,13 +11,20 @@ import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-/**
- * Setzt den Highscore des Spiels
- * @author jonas
- *
- */
+
 public class HighscoreSpecial implements ActionListener {
-	
+	/**
+	 * Kurze Beschreibung: Setzt den Highscore des Spiels
+	 * 
+	 * @author Jonas, Adham
+	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+	 * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+	 * @return: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+	 * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+	 *
+	 */
  
 	public static String firstName;
 	public static int firstScore;
@@ -39,10 +46,15 @@ public class HighscoreSpecial implements ActionListener {
 	JLabel highscore3 = new JLabel();
 	JLabel highscore4 = new JLabel();
 	JLabel highscore5 = new JLabel();
-/**
- * Frame Anpassungen(GrÃ¶ÃŸe, 
- */
+
 	public HighscoreSpecial() {
+		
+		/**
+		 * Kurze Beschreibung: Frame Anpassungen
+		 * 
+		 * @author Jonas, Adham
+		 *
+		 */
 		
 		frame.setLayout(null);
 		
@@ -78,10 +90,18 @@ public class HighscoreSpecial implements ActionListener {
 		frame.getContentPane().setBackground(Color.cyan);
 		
 	}
-	/**
-	 * Ãœberschreibt den neuen Highscore, wenn der alte Score Ã¼bertroffen wurde.
-	 */
+
 	public static void compareNormal() {
+		
+		/**
+		 * kurze Beschreibung: Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
+		 * 
+		 * @author: Jonas, Adham
+		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes), winSeries(Siegesserie)
+		 *  
+		 */
 		
 		if(Specialsingle.winSeries > firstScore) {
 			
@@ -142,10 +162,18 @@ public class HighscoreSpecial implements ActionListener {
 			}
 		}
 	}
-	/**
-	 * Die Methode schreibt den Namen in die Highscore Liste.
-	 */
+	
 	public static void saveScores() {
+		
+		/**
+		 * kurze Beschreibung: schreibt den Namen in die Highscore Liste
+		 * 
+		 * @author: Jonas, Adham
+		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+		 *  
+		 */
 		
 		try {
 			
@@ -171,10 +199,17 @@ public class HighscoreSpecial implements ActionListener {
 			
 		}
 	}
-	/**
-	 * Hier wird erkannt in welche Zeile der Name eingetragen wird.
-	 */
+
 	public static void loadScores() {
+		
+		/**
+		 * kurze Beschreibung: Es wird erkannt, in welche Zeile der Name eingetragen wird.
+		 * 
+		 * @author: Jonas, Adham
+		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+		 */
 		
 		try {
 			
@@ -199,11 +234,16 @@ public class HighscoreSpecial implements ActionListener {
 			System.out.println("File not Found!");
 		}
 	}
-/**
- * ZurÃ¼ck Button.
- */
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+		/**
+		 * kurze Beschreibung: Zurück-Button
+		 * 
+		 * @author: Jonas, Adham
+		 * 
+		 */
 		
 		if(e.getSource()==back) {
 			

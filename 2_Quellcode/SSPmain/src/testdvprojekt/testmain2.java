@@ -1,14 +1,15 @@
 package testdvprojekt;
 
+/**
+ * kurze Beschreibung: Rechnet den Gewinner aus, Zeigt mögliche Auswahlkombinationen an
+ * 
+ * @author: Burak, Melih
+ * @param:  int cpick(Pick vom Computer), int pscore(Anzahl der Spielerpunkte), int cscore(Anzahl der Computerpunkte), int printer(zeigt wer die Runde gewonnen hat)
+ * 
+ */
+
 public class testmain2 {
-	/**
-	 * kurze Beschreibung: Rechnet den Gewinner aus, Zeigt mögliche Auswahlkombinationen an
-	 * 
-	 * @author: Burak, Melih
-	 * @param:  int cpick(Pick vom Computer), int pscore(Anzahl der Spielerpunkte), int cscore(Anzahl der Computerpunkte), int printer(zeigt wer die Runde gewonnen hat)
-	 * 
-	 */
-	
+
 	public static int pscore = 0;
 	public static int cscore = 0;
 	
@@ -16,18 +17,16 @@ public class testmain2 {
 	
 	public static int cpick;
 
+	/**
+	 * kurze Beschreibung: Vergleicht die beiden Picks
+	 * 
+	 * @author: Burak, Melih
+	 * @param: int pick(Pick vom Spieler), int computer (Randomzahl zwischen 1-5)
+	 * @return: cpick(Pick vom Computer), printer(Zeigt wer gewonnen hat)
+	 * 
+	 */
 	
-
-
 	public static void compare() {
-		/**
-		 * kurze Beschreibung: Vergleicht die beiden Picks
-		 * 
-		 * @author: Burak, Melih
-		 * @param: int pick(Pick vom Spieler), int computer (Randomzahl zwischen 1-5)
-		 * @return: cpick(Pick vom Computer), printer(Zeigt wer gewonnen hat)
-		 * 
-		 */
 		
 		double r=Math.random();
 		int computer=1+(int)(r*3);

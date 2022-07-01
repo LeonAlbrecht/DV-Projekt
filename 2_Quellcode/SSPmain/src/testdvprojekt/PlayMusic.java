@@ -5,17 +5,15 @@ import java.io.File;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
+/**
+ * kurze Beschreibung: Musik, Sound während dem Spiel
+ * 
+ * @author: Adham, Jonas
+ * 
+ */
+
 public class PlayMusic {
-	/**
-	 * kurze Beschreibung: Musik, Sound während dem Spiel
-	 * 
-	 * @author: Adham, Jonas
-	 * 
-	 */
 
-
-
-public static void play() {
 	/**
 	 * kurze Beschreibung: Lässt die Musik laufen
 	 * 
@@ -23,6 +21,9 @@ public static void play() {
 	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
 	 * @return: Musik
 	 */
+	
+public static void play() {
+
   try {
    File file = new File("Sounds/Steve Jablonsky - Arrival To Earth (Official Audio) (1).wav");
    Clip clip = AudioSystem.getClip();
@@ -34,14 +35,16 @@ public static void play() {
   }
  }
 
+/**
+ * kurze Beschreibung: Sound, wenn man den Play Button betätigt
+ * 
+ * @author: Adham
+ * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
+ * @return: Musik
+ */
+
 public static void playButton() {
-	/**
-	 * kurze Beschreibung: Sound, wenn man den Play Button betätigt
-	 * 
-	 * @author: Adham
-	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
-	 * @return: Musik
-	 */
+
 	  try {
 	   File file = new File("Sounds/button-21.wav");
 	   Clip clip = AudioSystem.getClip();
@@ -52,15 +55,17 @@ public static void playButton() {
 	  }
 	 }
 
+/**
+ * kurze Beschreibung: Sound, der bei einem Sieg läuft
+ * 
+ * @author: Adham
+ * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
+ * @return: Musik
+ * 
+ */
+
 public static void playWin() {
-	/**
-	 * kurze Beschreibung: Sound, der bei einem Sieg läuft
-	 * 
-	 * @author: Adham
-	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
-	 * @return: Musik
-	 * 
-	 */
+
 	  try {
 	   File file = new File("Sounds/WinSound.wav");
 	   Clip clip = AudioSystem.getClip();
@@ -71,15 +76,17 @@ public static void playWin() {
 	  }
 	 }
 
+/**
+ * kurze Beschreibung: Sound, der bei einer Niederlage läuft
+ * 
+ * @author: Adham
+ * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
+ * @return: Musik
+ * 
+ */
+
 public static void playLoose() {
-	/**
-	 * kurze Beschreibung: Sound, der bei einer Niederlage läuft
-	 * 
-	 * @author: Adham
-	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
-	 * @return: Musik
-	 * 
-	 */
+
 	  try {
 	   File file = new File("Sounds/LooseSound.wav");
 	   Clip clip = AudioSystem.getClip();
@@ -90,15 +97,17 @@ public static void playLoose() {
 	  }
 	 }
 
+/**
+ * kurze Beschreibung: Sound, der bei einem Unentschieden läuft
+ * 
+ * @author: Adham
+ * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
+ * @return: Musik
+ * 
+ */
+
 public static void playDraw() {
-	/**
-	 * kurze Beschreibung: Sound, der bei einem Unentschieden läuft
-	 * 
-	 * @author: Adham
-	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
-	 * @return: Musik
-	 * 
-	 */
+
 	  try {
 	   File file = new File("Sounds/DrawSound.wav");
 	   Clip clip = AudioSystem.getClip();

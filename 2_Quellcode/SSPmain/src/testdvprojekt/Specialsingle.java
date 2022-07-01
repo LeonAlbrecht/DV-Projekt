@@ -15,13 +15,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * kurze Beschreibung: Modus mit Lizard & Spock, Spiel gegen Computer
+ * 
+ * @author: Leon, Adham
+ * @param:  int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
+ */
+
 public class Specialsingle implements ActionListener {
-	/**
-	 * kurze Beschreibung: Modus mit Lizard & Spock, Spiel gegen Computer
-	 * 
-	 * @author: Leon, Adham
-	 * @param:  int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
-	 */
+
 	public static int pick;
 	
 	public static int roundcount;
@@ -156,16 +158,16 @@ public class Specialsingle implements ActionListener {
 	frame.setVisible(true);				
 	}
 
+	/**
+	 * kurze Beschreibung: Zum Bet�tigen der Buttons
+	 * 
+	 * @author: Leon, Adham
+	 * @param: int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int pscore (Punkte des Spielers), int cscore (Punkte des Computers)
+	 * 
+	 */
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		/**
-		 * kurze Beschreibung: Zum Bet�tigen der Buttons
-		 * 
-		 * @author: Leon, Adham
-		 * @param: int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int pscore (Punkte des Spielers), int cscore (Punkte des Computers)
-		 * 
-		 */
-
 		
 		if(e.getSource()==button1) {
 			
@@ -321,7 +323,6 @@ public class Specialsingle implements ActionListener {
 		
 	}
 	
-public void printing() {
 	/**
 	 * kurze Beschreibung: Zeigt, wer die Runde gewonnen hat 
 	 * 
@@ -329,6 +330,8 @@ public void printing() {
 	 * @param: SpecialSingleRules.printer(In der Klasse SpecialSingleRules wird der Gewinner ausgerechnet)
 	 * @return: String
 	 */
+		
+public void printing() {
 		
 		if(SpecialSingleRules.printer == 0) {
 			
@@ -346,15 +349,16 @@ public void printing() {
 		}
 	}
 
+/**
+ * kurze Beschreibung: Zeigt, welches Element gew�hlt wurde.
+ * 
+ * @author: Leon, Adham
+ * @param: SpecialSingleRules.cpick(Element vom Computer)
+ * @return: String
+ * 
+ */
+
 public void showPicks() {
-	/**
-	 * kurze Beschreibung: Zeigt, welches Element gew�hlt wurde.
-	 * 
-	 * @author: Leon, Adham
-	 * @param: SpecialSingleRules.cpick(Element vom Computer)
-	 * @return: String
-	 * 
-	 */
 	
 		if(SpecialSingleRules.cpick == 1) {
 		
@@ -382,14 +386,16 @@ public void showPicks() {
 		}
 	
 }
+
+/**
+ * kurze Beschreibung: Zeigt, wer das Spiel gewonnen hat
+ * 
+ * @author: Leon, Adham
+ * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), SpecialSingleRules.pscore(Punktzahl des Spielers), SpecialSingleRules.cscore(Punktzahl des Computers)
+ * @return: winSeries(Siegesserie wird erh�ht oder bei Niederlage auf Null gesetzt)
+ */
+
 public void announceWinner() {
-	/**
-	 * kurze Beschreibung: Zeigt, wer das Spiel gewonnen hat
-	 * 
-	 * @author: Leon, Adham
-	 * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), SpecialSingleRules.pscore(Punktzahl des Spielers), SpecialSingleRules.cscore(Punktzahl des Computers)
-	 * @return: winSeries(Siegesserie wird erh�ht oder bei Niederlage auf Null gesetzt)
-	 */
 	
 		if(GUI.winscore == roundcount || SpecialSingleRules.pscore*2 > GUI.winscore || SpecialSingleRules.cscore*2 > GUI.winscore) {
 		

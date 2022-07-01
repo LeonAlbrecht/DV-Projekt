@@ -13,15 +13,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+
+/**
+ * kurze Beschreibung: Zum Namen auswählen für Special Single (Highscore)
+ * 
+ * @author: Adham
+ * @return: String name
+ */
+
 public class NameSPVC implements ActionListener{
-	
-	/**
-	 * kurze Beschreibung: Zum Namen auswählen für Special Single (Highscore)
-	 * 
-	 * @author: Adham
-	 * @return: String name
-	 */
-	
 	
 	JFrame frame = new JFrame();
 	JTextField name = new JTextField();
@@ -61,20 +61,17 @@ public class NameSPVC implements ActionListener{
 		frame.setTitle("Choose Name!");
 		
 	}
-
-
+	
+	/**
+	 * kurze Beschreibung: Button zum Weiterleiten zum Special Single Screen
+	 * 
+	 * @author: Adham
+	 * 
+	 */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		/**
-		 * kurze Beschreibung: Button zum Weiterleiten zum Special Single Screen
-		 * 
-		 * @author: Adham
-		 * 
-		 */
-		
-		
+			
 		if(e.getSource()==button) {
 			
 			PlayMusic.playButton();

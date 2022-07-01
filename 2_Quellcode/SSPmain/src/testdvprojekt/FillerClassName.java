@@ -13,15 +13,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+
+/**
+ * Zum Namen auswählen für Normal Single (Highscore)
+ * 
+ * @author: Adham
+ * @return: String name
+ */
+
 public class FillerClassName implements ActionListener{
-	
-	/**
-	 * kurze Beschreibung: Zum Namen auswählen für Normal Single (Highscore)
-	 * 
-	 * @author: Adham
-	 * @return: String name
-	 */
-	
 	
 	JFrame frame = new JFrame();
 	JTextField name = new JTextField();
@@ -62,17 +62,16 @@ public class FillerClassName implements ActionListener{
 		
 	}
 
-
+	
+	/**
+	 * Button zum Weiterleiten zum Special Single Screen
+	 * 
+	 * @author: Adham
+	 * 
+	 */
+	
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		/**
-		 * kurze Beschreibung: Button zum Weiterleiten zum Special Single Screen
-		 * 
-		 * @author: Adham
-		 * 
-		 */
-		
+	public void actionPerformed(ActionEvent e) {		
 		
 		if(e.getSource()==button) {
 			

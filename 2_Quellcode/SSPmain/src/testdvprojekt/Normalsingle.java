@@ -18,13 +18,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * kurze Beschreibung: Normaler Modus, Spiel gegen Computer
+ * 
+ * @author: Burak, Melih
+ * @param:  int a(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
+ */
+
 public class Normalsingle implements ActionListener{	
-	/**
-	 * kurze Beschreibung: Normaler Modus, Spiel gegen Computer
-	 * 
-	 * @author: Burak, Melih
-	 * @param:  int a(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
-	 */
+
 //class: mode for normal-single 
 	
 	public static int a;
@@ -138,16 +140,15 @@ public class Normalsingle implements ActionListener{
 
 	}
 
+	/**
+	 * kurze Beschreibung: Zum Betätigen der Buttons
+	 * 
+	 * @author: Burak, Melih
+	 * @param:  int a(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
+	 */
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		/**
-		 * kurze Beschreibung: Zum Betätigen der Buttons
-		 * 
-		 * @author: Burak, Melih
-		 * @param:  int a(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
-		 */
-
 		
 		if(e.getSource()==button1) {
 			
@@ -265,14 +266,15 @@ public class Normalsingle implements ActionListener{
 
 	}
 	
+	/**
+	 * kurze Beschreibung: Zeigt, wer die Runde gewonnen hat 
+	 * 
+	 * @author: Burak, Melih
+	 * @param: testmain2.printer(In der Klasse testmain2 wird der Gewinner ausgerechnet)
+	 * @return: String
+	 */
+	
 	public void printing() {
-		/**
-		 * kurze Beschreibung: Zeigt, wer die Runde gewonnen hat 
-		 * 
-		 * @author: Burak, Melih
-		 * @param: testmain2.printer(In der Klasse testmain2 wird der Gewinner ausgerechnet)
-		 * @return: String
-		 */
 		
 		if(testmain2.printer == 0) {
 			
@@ -290,14 +292,15 @@ public class Normalsingle implements ActionListener{
 		}
 	}
 	
+	/**
+	 * kurze Beschreibung: Zeigt, wer das Spiel gewonnen hat
+	 * 
+	 * @author: Burak, Melih
+	 * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), testmain2.pscore(Punktzahl des Spielers), testmain2.cscore(Punktzahl des Computers)
+	 * @return: winSeries(Siegesserie wird erhöht oder bei Niederlage auf Null gesetzt)
+	 */
+	
 	public void announceWinner() {
-		/**
-		 * kurze Beschreibung: Zeigt, wer das Spiel gewonnen hat
-		 * 
-		 * @author: Burak, Melih
-		 * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), testmain2.pscore(Punktzahl des Spielers), testmain2.cscore(Punktzahl des Computers)
-		 * @return: winSeries(Siegesserie wird erhöht oder bei Niederlage auf Null gesetzt)
-		 */
 		
 		if(GUI.winscore == roundcount || testmain2.pscore*2 > GUI.winscore || testmain2.cscore*2 > GUI.winscore) {
 			
@@ -360,15 +363,16 @@ public class Normalsingle implements ActionListener{
 		}
 	}
 	
+	/**
+	 * kurze Beschreibung: Zeigt, welches Element gewählt wurde.
+	 * 
+	 * @author: Burak, Melih
+	 * @param: testmain2.cpick(Element vom Computer)
+	 * @return: String
+	 * 
+	 */
+	
 	public void showPicks() {
-		/**
-		 * kurze Beschreibung: Zeigt, welches Element gewählt wurde.
-		 * 
-		 * @author: Burak, Melih
-		 * @param: testmain2.cpick(Element vom Computer)
-		 * @return: String
-		 * 
-		 */
 		
 		if(testmain2.cpick == 1) {
 			

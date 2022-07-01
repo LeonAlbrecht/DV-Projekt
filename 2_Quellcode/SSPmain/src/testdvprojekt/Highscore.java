@@ -98,16 +98,18 @@ public class Highscore implements ActionListener {
 		
 	}
 	
+	/**
+	 * kurze Beschreibung: Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
+	 * 
+	 * @author: Jonas, Adham
+	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+	 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes), winSeries(Siegesserie)
+	 *  
+	 */
+	
+	
 	public static void compareNormal() {
-		/**
-		 * kurze Beschreibung: Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
-		 * 
-		 * @author: Jonas, Adham
-		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
-		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
-		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes), winSeries(Siegesserie)
-		 *  
-		 */
 		
 		
 		if(Normalsingle.winSeries > firstScore) {
@@ -170,17 +172,18 @@ public class Highscore implements ActionListener {
 		}
 	}
 
+	
+	/**
+	 * kurze Beschreibung: schreibt den Namen in die Highscore Liste
+	 * 
+	 * @author: Jonas, Adham
+	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+	 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+	 *  
+	 */
+	
 	public static void saveScores() {
-		
-		/**
-		 * kurze Beschreibung: schreibt den Namen in die Highscore Liste
-		 * 
-		 * @author: Jonas, Adham
-		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
-		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
-		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
-		 *  
-		 */
 		
 		try {
 			
@@ -207,15 +210,16 @@ public class Highscore implements ActionListener {
 		}
 	}
 
+	/**
+	 * kurze Beschreibung: Es wird erkannt, in welche Zeile der Name eingetragen wird.
+	 * 
+	 * @author: Jonas, Adham
+	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+	 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+	 */
+	
 	public static void loadScores() {
-		/**
-		 * kurze Beschreibung: Es wird erkannt, in welche Zeile der Name eingetragen wird.
-		 * 
-		 * @author: Jonas, Adham
-		 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
-		 * 	String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
-		 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
-		 */
 		
 		try {
 			
@@ -241,15 +245,16 @@ public class Highscore implements ActionListener {
 		}
 	}
 
+	
+	/**
+	 * kurze Beschreibung: Zurück-Button
+	 * 
+	 * @author: Jonas, Adham
+	 * 
+	 */
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		/**
-		 * kurze Beschreibung: Zurück-Button
-		 * 
-		 * @author: Jonas, Adham
-		 * 
-		 */
 		
 		if(e.getSource()==back) {
 			

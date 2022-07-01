@@ -23,18 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.RootPaneContainer;
 
-
-//Beispiel JavaDoc:
-
-/**
- * kurze Beschreibung:
- * 
- * @author: (der jeweilige Autor)
- * @param:  (die Parameter der Klasse/Methode)
- * @return: (Rückgabewerte der Klasse/Methde)
- */
-
-
 public class GUI implements ActionListener{
 	
 	public static int winscore;

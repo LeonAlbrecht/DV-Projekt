@@ -42,14 +42,13 @@ public class Specialsingle implements ActionListener {
 	JLabel papier = new JLabel("Papier:");
 	JLabel echse = new JLabel("Echse:");
 	JLabel spock = new JLabel("Spock:");
-	
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
-	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus!");
+	JLabel printline = new JLabel("Wï¿½hlen Sie eine Mï¿½glichkeit aus!");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Erneut spielen");
-	JButton back = new JButton("zurüch zum Titel");
+	JButton back = new JButton("zurï¿½ch zum Titel");
 	JLabel nameTag = new JLabel(name);
 	JLabel playername= new JLabel("Spieler:");
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
@@ -149,8 +148,6 @@ public class Specialsingle implements ActionListener {
 	
 	
 	
-		
-		
 	frame.setLocation(0, 0);								
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 	frame.add(panel1, BorderLayout.CENTER);					
@@ -162,7 +159,7 @@ public class Specialsingle implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		/**
-		 * kurze Beschreibung: Zum Betätigen der Buttons
+		 * kurze Beschreibung: Zum Betï¿½tigen der Buttons
 		 * 
 		 * @author: Leon, Adham
 		 * @param: int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int pscore (Punkte des Spielers), int cscore (Punkte des Computers)
@@ -176,15 +173,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 1;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Schere ausgewählt");
+			ppick.setText("Sie haben Schere ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			printing();
 			roundcount++;
 			announceWinner();
-			
-			
 		}
 		
 		if(e.getSource()==button2) {
@@ -193,15 +188,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 2;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Stein ausgewählt");
+			ppick.setText("Sie haben Stein ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			printing();
 			roundcount++;
 			announceWinner();
-			
-			
 		}
 		
 		if(e.getSource()==button3) {
@@ -210,15 +203,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 3;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Papier ausgewählt");
+			ppick.setText("Sie haben Papier ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			printing();
 			roundcount++;
 			announceWinner();
-			
-			
 		}
 		
 		if(e.getSource()==button4) {
@@ -227,15 +218,13 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 4;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Lizard ausgewählt");
+			ppick.setText("Sie haben Lizard ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			printing();
 			roundcount++;
-			announceWinner();
-			
-			
+			announceWinner();	
 		}
 		
 		if(e.getSource()==button5) {
@@ -244,22 +233,20 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 5;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Shpock ausgewählt");
+			ppick.setText("Sie haben Shpock ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			printing();
 			roundcount++;
 			announceWinner();
-			
-			
 		}
 		
-if(e.getSource()==playagain) {
+		if(e.getSource()==playagain) {
 			
-	PlayMusic.playButton();
+			PlayMusic.playButton();
 	
-	roundcount = 0;
+			roundcount = 0;
 			SpecialSingleRules.cscore = 0;
 			SpecialSingleRules.pscore = 0;
 			
@@ -280,20 +267,19 @@ if(e.getSource()==playagain) {
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			 
-			printline.setText("Wählen Sie eine Möglichkeit aus");
+			printline.setText("Wï¿½hlen Sie eine Mï¿½glichkeit aus");
 			ppick.setText("");
 			cpick.setText("");
-			
 		}
 
-if(e.getSource()==back) {
+		if(e.getSource()==back) {
 	
-	PlayMusic.playButton();
+			PlayMusic.playButton();
 	
-	roundcount = 0;
+			roundcount = 0;
 	
-	HighscoreSpecial.compareNormal();
-	HighscoreSpecial.saveScores();
+			HighscoreSpecial.compareNormal();
+			HighscoreSpecial.saveScores();
 			SpecialSingleRules.cscore = 0;
 			SpecialSingleRules.pscore = 0;
 			
@@ -322,19 +308,16 @@ if(e.getSource()==back) {
 	 
 			frame.dispose();
 			GUI gui = new GUI();
-	
-			}
+		}
 
-if(e.getSource()==highscore) {
+		if(e.getSource()==highscore) {
 	
-	PlayMusic.playButton();
+			PlayMusic.playButton();
 	
-	HighscoreSpecial.compareNormal();
-	HighscoreSpecial.saveScores();
-	HighscoreSpecial highscore = new HighscoreSpecial();
-}
-		
-		
+			HighscoreSpecial.compareNormal();
+			HighscoreSpecial.saveScores();
+			HighscoreSpecial highscore = new HighscoreSpecial();
+		}
 		
 	}
 	
@@ -350,25 +333,22 @@ public void printing() {
 		if(SpecialSingleRules.printer == 0) {
 			
 			printline.setText("Unentschieden");
-			
 		}
 		
 		if(SpecialSingleRules.printer == 1) {
 			
-			printline.setText("Du hast gewonnen :)");
-			
+			printline.setText("Du hast gewonnen :)");	
 		}
 		
 		if(SpecialSingleRules.printer == 2) {
 			
-			printline.setText("Du hast verloren :c");
-			
+			printline.setText("Du hast verloren :c");	
 		}
 	}
 
 public void showPicks() {
 	/**
-	 * kurze Beschreibung: Zeigt, welches Element gewählt wurde.
+	 * kurze Beschreibung: Zeigt, welches Element gewï¿½hlt wurde.
 	 * 
 	 * @author: Leon, Adham
 	 * @param: SpecialSingleRules.cpick(Element vom Computer)
@@ -378,25 +358,27 @@ public void showPicks() {
 	
 		if(SpecialSingleRules.cpick == 1) {
 		
-			cpick.setText("Der Computer hat Schere ausgewählt");
+			cpick.setText("Der Computer hat Schere ausgewï¿½hlt");
 		}
 	
 		if(SpecialSingleRules.cpick == 2) {
 		
-			cpick.setText("Der Computer hat Stein ausgewählt");
+			cpick.setText("Der Computer hat Stein ausgewï¿½hlt");
 		}
 
 		if(SpecialSingleRules.cpick == 3) {
 
-			cpick.setText("Der Computer hat Papier ausgewählt");
+			cpick.setText("Der Computer hat Papier ausgewï¿½hlt");
 		}
+		
 		if(SpecialSingleRules.cpick == 4) {
 
-			cpick.setText("Der Computer hat Lizard ausgewählt");
+			cpick.setText("Der Computer hat Lizard ausgewï¿½hlt");
 		}
+		
 		if(SpecialSingleRules.cpick == 5) {
 
-			cpick.setText("Der Computer hat Shpock ausgewählt");
+			cpick.setText("Der Computer hat Shpock ausgewï¿½hlt");
 		}
 	
 }
@@ -406,7 +388,7 @@ public void announceWinner() {
 	 * 
 	 * @author: Leon, Adham
 	 * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), SpecialSingleRules.pscore(Punktzahl des Spielers), SpecialSingleRules.cscore(Punktzahl des Computers)
-	 * @return: winSeries(Siegesserie wird erhöht oder bei Niederlage auf Null gesetzt)
+	 * @return: winSeries(Siegesserie wird erhï¿½ht oder bei Niederlage auf Null gesetzt)
 	 */
 	
 		if(GUI.winscore == roundcount || SpecialSingleRules.pscore*2 > GUI.winscore || SpecialSingleRules.cscore*2 > GUI.winscore) {
@@ -433,8 +415,8 @@ public void announceWinner() {
 			
 			playagain.show();
 			back.show();
-			
 		}
+		
 		if(SpecialSingleRules.cscore > SpecialSingleRules.pscore) {
 			
 			printline.setText("Du hast das Spiel verloren");
@@ -455,11 +437,9 @@ public void announceWinner() {
 			echse.hide();
 			
 			playagain.show();
-			back.show();
-			
-			
-			
+			back.show();	
 		}
+		
 		if(SpecialSingleRules.cscore == SpecialSingleRules.pscore) {
 			
 			printline.setText("Dieses Spiel endet mit einem Unentschieden");
@@ -479,14 +459,10 @@ public void announceWinner() {
 			
 			playagain.show();
 			back.show();
-			
-			
 		}
-		
-		
-		
-		
-		
+				
 	}
+		
 }
+	
 }

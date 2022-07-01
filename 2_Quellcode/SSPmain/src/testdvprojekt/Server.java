@@ -10,6 +10,25 @@ import java.util.Scanner;
 
 public class Server {
 	
+	/**
+	 * Erklärung zum gedachten Funktionsprinzip (da es leider praktisch nicht funktioniert):
+	 * 
+	 * Man kann in der Klasse NormalDuo entweder Joinen oder Createn. Beim Createn öffnet sich eine Client socket und ein Server. 
+	 * Beim Joinen nur eine Client Socket. Diese beiden Sockets verbinden sich mit dem Server. Nun wird wenn man einen Button betätigt mit der Methode 
+	 * sendPick() die Auswahl der Spieler 1 bzw. 2 an den Server geschickt. Der Server rechnet nun mit der Methode comparePick1Pick2() aus wer der 
+	 * Gewinner ist und sendet 1 (wenn Spieler 1 gewonnen hat) bzw. 2 (wenn 2 gewonnen hat) an die beiden remoteClients. Dort werden dann die scores
+	 * erhöht, Sieger bestimmt etc.. Problem ist, dass uns noch keine Möglichkeit bekannt ist, um die beiden Client Sockets voneinander zu unterscheiden.
+	 * Deshalb wollten wir, dass der Spieler 2 wartet, wenn Spieler 1 wählt. So könnte man durch die Chronologie die beiden Sockets unterscheiden.
+	 * Mit nem neuen Thread in einer Schleife (in der Klasse Client2.controlTurn) 
+	 * sollte die boolean Variable turn regulieren wann welcher Spieler wählen kann. Über den server sollte die Variable turn dann verändert werden.
+	 * 
+	 * Es ist abzusehen, dass dieser Ansatz wie schon viele vorherige nicht funktionieren wird und leider fehlt uns die Zeit, um uns nochmal was Neues 
+	 * zu überlegen. Da wir aber sonst nur ein mehrspieler auf einem pc mit weggucken hätten (was im wesentlichen, dass gleiche wäre wie 
+	 * Normal/Specialsingle) dachten wir uns, dass wir lieber diesen work in Progress Ansatz drin lassen, auch wenn er nicht funktioniert.
+	 * 
+	 * 
+	 */
+	
 	static int pick1;
 	static int pick2;
 	static int winner;

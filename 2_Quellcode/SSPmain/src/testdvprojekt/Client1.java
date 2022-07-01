@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 public class Client1 {
 	
-	
+	static boolean turn = false;
+	static boolean trash;
 	
 	
 	private static InetSocketAddress adress;

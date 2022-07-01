@@ -28,14 +28,14 @@ public class Normalduo implements ActionListener {
 	JFrame frame = new JFrame();
 	JButton create = new JButton("Create Room");
 	JButton join = new JButton("Join Room");
-	JButton client1Schere = new JButton("Schere");
-	JButton client1Stein = new JButton("Stein");
-	JButton client1Papier = new JButton("Papier");
-	JButton client2Schere = new JButton("Schere");
-	JButton client2Stein = new JButton("Stein");
-	JButton client2Papier = new JButton("Papier");
-	JButton playAgain = new JButton("Play again");
-	JButton back = new JButton("Back to title");
+	static JButton client1Schere = new JButton("Schere");
+	static JButton client1Stein = new JButton("Stein");
+	static JButton client1Papier = new JButton("Papier");
+	static JButton client2Schere = new JButton("Schere");
+	static JButton client2Stein = new JButton("Stein");
+	static JButton client2Papier = new JButton("Papier");
+	static JButton playAgain = new JButton("Play again");
+	static JButton back = new JButton("Back to title");
 	static JLabel announceWin = new JLabel();
 	
 	public Normalduo() {
@@ -197,12 +197,48 @@ public class Normalduo implements ActionListener {
 				
 				announceWin.setText("Spieler 1 gewinnt das Spiel!");
 				
+				client1Schere.hide();
+				client1Stein.hide();
+				client1Papier.hide();
+				client2Schere.hide();
+				client2Stein.hide();
+				client2Papier.hide();
+				
+				playAgain.show();
+				back.show();
+				
 				
 			}
 			
 			if(player2Score > player1Score) {
 				
 				announceWin.setText("Spieler 2 gewinnt das Spiel!");
+				
+				client1Schere.hide();
+				client1Stein.hide();
+				client1Papier.hide();
+				client2Schere.hide();
+				client2Stein.hide();
+				client2Papier.hide();
+				
+				playAgain.show();
+				back.show();
+				
+			}
+			
+			if(player1Score == player2Score) {
+				
+				announceWin.setText("Das Spiel endet mit einem Unentschieden.");
+				
+				client1Schere.hide();
+				client1Stein.hide();
+				client1Papier.hide();
+				client2Schere.hide();
+				client2Stein.hide();
+				client2Papier.hide();
+				
+				playAgain.show();
+				back.show();
 				
 			}
 			

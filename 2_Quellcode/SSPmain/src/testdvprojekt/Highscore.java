@@ -94,7 +94,6 @@ public class Highscore implements ActionListener {
 		frame.setLocation(0,0);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Highscore List Normal-Single");
-		frame.getContentPane().setBackground(Color.cyan);
 		
 	}
 	

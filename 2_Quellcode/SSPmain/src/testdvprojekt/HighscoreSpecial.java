@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
- * Kurze Beschreibung: Setzt den Highscore des Spiels
+ * Setzt den Highscore des Spiels
  * 
  * @author Jonas, Adham
  * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
@@ -49,7 +49,7 @@ public class HighscoreSpecial implements ActionListener {
 	JLabel highscore5 = new JLabel();
 	
 	/**
-	 * Kurze Beschreibung: Frame Anpassungen
+	 * Frame Anpassungen
 	 * 
 	 * @author Jonas, Adham
 	 *
@@ -94,7 +94,7 @@ public class HighscoreSpecial implements ActionListener {
 
 	
 	/**
-	 * kurze Beschreibung: Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
+	 * Überschreibt den neuen Highscore, wenn der alte Score übertroffen wurde.
 	 * 
 	 * @author: Jonas, Adham
 	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
@@ -167,7 +167,7 @@ public class HighscoreSpecial implements ActionListener {
 	
 	
 	/**
-	 * kurze Beschreibung: schreibt den Namen in die Highscore Liste
+	 * schreibt den Namen in die Highscore Liste
 	 * 
 	 * @author: Jonas, Adham
 	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
@@ -205,7 +205,7 @@ public class HighscoreSpecial implements ActionListener {
 
 	
 	/**
-	 * kurze Beschreibung: Es wird erkannt, in welche Zeile der Name eingetragen wird.
+	 * Es wird erkannt, in welche Zeile der Name eingetragen wird.
 	 * 
 	 * @author: Jonas, Adham
 	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
@@ -241,7 +241,7 @@ public class HighscoreSpecial implements ActionListener {
 
 	
 	/**
-	 * kurze Beschreibung: Zurück-Button
+	 * Zurück-Button
 	 * 
 	 * @author: Jonas, Adham
 	 * 

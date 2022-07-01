@@ -1,6 +1,7 @@
 package testdvprojekt;
 
 import java.awt.Color;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -15,19 +16,21 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * Kurze Beschreibung: Setzt den Highscore des Spiels
+ * 
+ * @author Jonas, Adham
+ * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+ * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+ *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+ * @return: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
+ * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
+ *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
+ *
+ */
+
 public class Highscore implements ActionListener {
-	/**
-	 * Kurze Beschreibung: Setzt den Highscore des Spiels
-	 * 
-	 * @author Jonas, Adham
-	 * @param: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
-	 * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
-	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
-	 * @return: String firstName(Name des ersten Platzes), int firstScore(Erreichte Punktzahl des ersten Platzes), String SecondName(Name des zweiten Platzes), int secondScore(Erreichte Punktzahl des zweiten Platzes), 
-	 * String thirdName(Name des dritten Platzes), int thirdScore(Erreichte Punktzahl des dritten Platzes),String fourthName(Name des vierten Platzes), int fourthScore(Erreichte Punktzahl des vierten Platzes), 
-	 *  String fifthName(Name des fünften Platzes), int fifthScore(Erreichte Punktzahl des fünften Platzes)
-	 *
-	 */
+
  
 	public static String firstName;
 	public static int firstScore;

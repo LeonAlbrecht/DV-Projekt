@@ -16,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * kurze Beschreibung: Modus mit Lizard & Spock, Spiel gegen Computer
+ * Modus mit Lizard & Spock, Spiel gegen Computer
  * 
  * @author: Leon, Adham
  * @param:  int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int winSeries(Anzahl in Reihe gewonnener Spiele), String name(Name des Spielers)
@@ -46,11 +46,11 @@ public class Specialsingle implements ActionListener {
 	JLabel spock = new JLabel("Spock:");
 	JLabel pscore = new JLabel("Player Score: ");
 	JLabel cscore = new JLabel("Computer Score: ");
-	JLabel printline = new JLabel("Wählen Sie eine Möglichkeit aus!");
+	JLabel printline = new JLabel("Wï¿½hlen Sie eine Mï¿½glichkeit aus!");
 	JLabel ppick = new JLabel();
 	JLabel cpick = new JLabel();
 	JButton playagain = new JButton("Erneut spielen");
-	JButton back = new JButton("zurüch zum Titel");
+	JButton back = new JButton("zurï¿½ch zum Titel");
 	JLabel nameTag = new JLabel(name);
 	JLabel playername= new JLabel("Spieler:");
 	ImageIcon icon1 =new ImageIcon("pictures/bild1.jpg");
@@ -159,7 +159,7 @@ public class Specialsingle implements ActionListener {
 	}
 
 	/**
-	 * kurze Beschreibung: Zum Betï¿½tigen der Buttons
+	 * Zum Betï¿½tigen der Buttons
 	 * 
 	 * @author: Leon, Adham
 	 * @param: int pick(Pick vom Spieler), int roundcount(Anzahl der Runden), int pscore (Punkte des Spielers), int cscore (Punkte des Computers)
@@ -175,7 +175,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 1;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Schere ausgewählt");
+			ppick.setText("Sie haben Schere ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -190,7 +190,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 2;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Stein ausgewählt");
+			ppick.setText("Sie haben Stein ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -205,7 +205,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 3;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Papier ausgewählt");
+			ppick.setText("Sie haben Papier ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -220,7 +220,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 4;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Lizard ausgewählt");
+			ppick.setText("Sie haben Lizard ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -235,7 +235,7 @@ public class Specialsingle implements ActionListener {
 			
 			pick = 5;
 			SpecialSingleRules.compare();
-			ppick.setText("Sie haben Shpock ausgewählt");
+			ppick.setText("Sie haben Shpock ausgewï¿½hlt");
 			showPicks();
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
@@ -269,7 +269,7 @@ public class Specialsingle implements ActionListener {
 			pscore.setText("Player Score: " + SpecialSingleRules.pscore);
 			cscore.setText("Computer Score: " + SpecialSingleRules.cscore);
 			 
-			printline.setText("Wählen Sie eine Möglichkeit aus");
+			printline.setText("Wï¿½hlen Sie eine Mï¿½glichkeit aus");
 			ppick.setText("");
 			cpick.setText("");
 		}
@@ -324,7 +324,7 @@ public class Specialsingle implements ActionListener {
 	}
 	
 	/**
-	 * kurze Beschreibung: Zeigt, wer die Runde gewonnen hat 
+	 * Zeigt, wer die Runde gewonnen hat 
 	 * 
 	 * @author: Leon, Adham
 	 * @param: SpecialSingleRules.printer(In der Klasse SpecialSingleRules wird der Gewinner ausgerechnet)
@@ -350,7 +350,7 @@ public void printing() {
 	}
 
 /**
- * kurze Beschreibung: Zeigt, welches Element gewï¿½hlt wurde.
+ * Zeigt, welches Element gewï¿½hlt wurde.
  * 
  * @author: Leon, Adham
  * @param: SpecialSingleRules.cpick(Element vom Computer)
@@ -362,33 +362,33 @@ public void showPicks() {
 	
 		if(SpecialSingleRules.cpick == 1) {
 		
-			cpick.setText("Der Computer hat Schere ausgewählt");
+			cpick.setText("Der Computer hat Schere ausgewï¿½hlt");
 		}
 	
 		if(SpecialSingleRules.cpick == 2) {
 		
-			cpick.setText("Der Computer hat Stein ausgewählt");
+			cpick.setText("Der Computer hat Stein ausgewï¿½hlt");
 		}
 
 		if(SpecialSingleRules.cpick == 3) {
 
-			cpick.setText("Der Computer hat Papier ausgewählt");
+			cpick.setText("Der Computer hat Papier ausgewï¿½hlt");
 		}
 		
 		if(SpecialSingleRules.cpick == 4) {
 
-			cpick.setText("Der Computer hat Lizard ausgewählt");
+			cpick.setText("Der Computer hat Lizard ausgewï¿½hlt");
 		}
 		
 		if(SpecialSingleRules.cpick == 5) {
 
-			cpick.setText("Der Computer hat Shpock ausgewählt");
+			cpick.setText("Der Computer hat Shpock ausgewï¿½hlt");
 		}
 	
 }
 
 /**
- * kurze Beschreibung: Zeigt, wer das Spiel gewonnen hat
+ * Zeigt, wer das Spiel gewonnen hat
  * 
  * @author: Leon, Adham
  * @param: GUI.winscore(vorher bestimmte Anzahl der Runden), SpecialSingleRules.pscore(Punktzahl des Spielers), SpecialSingleRules.cscore(Punktzahl des Computers)

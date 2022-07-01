@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 
 
 /**
- * kurze Beschreibung: Zum Namen auswählen für Special Single (Highscore)
+ * Zum Namen auswählen für Special Single (Highscore)
  * 
  * @author: Adham
  * @return: String name
@@ -63,7 +63,7 @@ public class NameSPVC implements ActionListener{
 	}
 	
 	/**
-	 * kurze Beschreibung: Button zum Weiterleiten zum Special Single Screen
+	 * Button zum Weiterleiten zum Special Single Screen
 	 * 
 	 * @author: Adham
 	 * 

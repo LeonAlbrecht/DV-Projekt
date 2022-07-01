@@ -6,7 +6,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 /**
- * kurze Beschreibung: Musik, Sound während dem Spiel
+ * Musik, Sound während dem Spiel
  * 
  * @author: Adham, Jonas
  * 
@@ -15,7 +15,7 @@ import javax.sound.sampled.Clip;
 public class PlayMusic {
 
 	/**
-	 * kurze Beschreibung: Lässt die Musik laufen
+	 * Lässt die Musik laufen
 	 * 
 	 * @author: Jonas
 	 * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
@@ -36,7 +36,7 @@ public static void play() {
  }
 
 /**
- * kurze Beschreibung: Sound, wenn man den Play Button betätigt
+ * Sound, wenn man den Play Button betätigt
  * 
  * @author: Adham
  * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
@@ -56,7 +56,7 @@ public static void playButton() {
 	 }
 
 /**
- * kurze Beschreibung: Sound, der bei einem Sieg läuft
+ * Sound, der bei einem Sieg läuft
  * 
  * @author: Adham
  * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
@@ -77,7 +77,7 @@ public static void playWin() {
 	 }
 
 /**
- * kurze Beschreibung: Sound, der bei einer Niederlage läuft
+ * Sound, der bei einer Niederlage läuft
  * 
  * @author: Adham
  * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)
@@ -98,7 +98,7 @@ public static void playLoose() {
 	 }
 
 /**
- * kurze Beschreibung: Sound, der bei einem Unentschieden läuft
+ * Sound, der bei einem Unentschieden läuft
  * 
  * @author: Adham
  * @param: AudioSystem.getClip(zieht die File in die Variable), clip.open(Öffnet die Musik), clip.start(Startet die Musik)

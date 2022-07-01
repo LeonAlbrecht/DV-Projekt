@@ -1,7 +1,7 @@
 package testdvprojekt;
 
 /**
- * kurze Beschreibung: Rechnet den Gewinner aus, Zeigt mögliche Auswahlkombinationen an
+ * Rechnet den Gewinner aus, Zeigt mögliche Auswahlkombinationen an
  * 
  * @author: Leon, Adham
  * @param:  int cpick(Pick vom Computer), int pscore(Anzahl der Spielerpunkte), int cscore(Anzahl der Computerpunkte), int printer(zeigt wer die Runde gewonnen hat)
@@ -18,7 +18,7 @@ public class SpecialSingleRules {
 	public static int printer;
 	
 	/**
-	 * kurze Beschreibung: Vergleicht die beiden Picks
+	 * Vergleicht die beiden Picks
 	 * 
 	 * @author: Leon, Adham
 	 * @param: int pick(Pick vom Spieler), int computer (Randomzahl zwischen 1-5)
